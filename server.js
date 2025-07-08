@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/', (req, res) => {
+  res.send('¡Bienvenido a SnackTastico!');
+});
+
 // Ruta para WhatsApp
 app.post('/enviar-whatsapp', async (req, res) => {
   try {
@@ -47,4 +51,5 @@ app.post('/enviar-whatsapp', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Servidor listo en http://localhost:3000"));
+const PORT = process.env.PORT || 3000; // Railway asigna un puerto dinámico
+app.listen(PORT, () => console.log(`Servidor listo en puerto ${PORT}`));
