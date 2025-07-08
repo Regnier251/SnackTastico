@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 
 // Middlewares clave 
-app.use(express.static(path.join(__dirname, 'public'))); // <-- Servir CSS/JS/Imágenes
+app.use(express.static(path.join(__dirname, 'public'))); // Servir archivos estáticos
 app.use(cors());
 app.use(express.json());
 
@@ -15,13 +15,13 @@ const client = twilio(
   process.env.TWILIO_AUTH_TOKEN
 );
 
-// Ruta para la raíz
+// Ruta PRINCIPAL ÚNICA (elige solo una versión)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-app.get('/', (req, res) => {
-  res.send('¡Bienvenido a SnackTastico!');
+  // Opción 1: Si tienes un index.html en /public
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  
+  // O Opción 2: Si quieres un mensaje simple
+  // res.send('¡Bienvenido a SnackTastico!');
 });
 
 // Ruta para WhatsApp
@@ -51,5 +51,8 @@ app.post('/enviar-whatsapp', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000; // Railway asigna un puerto dinámico
-app.listen(PORT, () => console.log(`Servidor listo en puerto ${PORT}`));
+// Puerto - Versión mejorada
+const PORT = process.env.PORT || 3000; // <-- 3000 es fallback para desarrollo local
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Servidor listo en http://0.0.0.0:${PORT}`);
+});
