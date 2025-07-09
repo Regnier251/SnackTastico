@@ -815,7 +815,7 @@
         };
 
         try {
-          const response = await fetch("http://localhost:3000/enviar-whatsapp", {
+          const response = await fetch("snacktastico-production.up.railway.app", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
@@ -829,6 +829,7 @@
           }
         } catch (error) {
           alert("Error de conexión");
+          console.log(error);
         }
       });
     </script>
