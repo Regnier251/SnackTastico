@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 
-// Middlewares clave
+// Middlewares
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(express.json());
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Ruta para WhatsApp (tu código existente)
+// Ruta para WhatsApp
 app.post('/enviar-whatsapp', async (req, res) => {
   try {
     const { name, phone, guests, date, time, message } = req.body;
@@ -47,4 +47,6 @@ app.post('/enviar-whatsapp', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor listo en puerto ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Servidor en puerto ${PORT}`);
+});
