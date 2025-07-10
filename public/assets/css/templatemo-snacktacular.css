@@ -27,6 +27,12 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+
+:root {
+  --accent-color: #ce1212; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+}
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -699,9 +705,6 @@ banner
     stroke-dashoffset: 0;
   }
 }
-
-
-
 
 #top .left-content h6 {
   font-size: 15px;
@@ -1529,11 +1532,84 @@ footer
 --------------------------------------------- 
 */
 
-footer {
-  margin-top: 60px;
-  padding: 50px 0px;
+.footer {
+  --heading-font: var(--default-font);
+  color: var(--default-color);
   background-color: #d0c1df;
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
 }
+
+.footer .icon {
+  color: var(--accent-color);
+  margin-right: 15px;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer .address p {
+  margin-bottom: 0px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer .copyright {
+  padding-top: 20px;
+  border-top: 1px solid white;
+  border-top: transparent 90%;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+footer .right-text-content ul li a {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #d0c1df;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+
+/* 
 
 footer .left-text-content p {
   margin-top: 5px;
@@ -1567,26 +1643,9 @@ footer .right-text-content ul li:first-child {
   margin-left: 0px;
 }
 
-
-footer .right-text-content ul li a {
-  width: 44px;
-  height: 44px;
-  display: inline-block;
-  text-align: center;
-  line-height: 44px;
-  font-size: 20px;
-  background-color: #fff;
-  border-radius: 50%;
-  color: #d0c1df;
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
 footer .right-text-content ul li a:hover {
   color: #2a2a2a;
-}
+} */
 
 /* 
 ---------------------------------------------
