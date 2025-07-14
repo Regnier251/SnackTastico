@@ -531,6 +531,20 @@ header
   color: var(--contrast-color);
 }
 
+/* Ajuste específico para el logo */
+.logo img {
+    height: 140px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Ajuste para el estado "background-header" (scroll) */
+.background-header .logo img {
+    height: 90px; /* Reduce ligeramente el logo al hacer scroll */
+}
+
+
+
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -649,19 +663,6 @@ header
 }
 
 
-/* Ajuste específico para el logo */
-.logo img {
-    height: 140px;
-    width: auto;
-    transition: all 0.3s ease;
-}
-
-/* Ajuste para el estado "background-header" (scroll) */
-.background-header .logo img {
-    height: 90px; /* Reduce ligeramente el logo al hacer scroll */
-}
-
-
 /* 
 ---------------------------------------------
 banner
@@ -716,7 +717,7 @@ banner
 #top .left-content h6 {
   font-size: 15px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 00;
   color: var(--surface-color);
   letter-spacing: 3px;
   margin-top: 5px;
@@ -729,23 +730,6 @@ banner
 
 #top .left-content .main-white-button a {
   display: inline-block;
-}
-
-/* ==== Main CSS === */
-.img-fill{
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  position: relative;
-  text-align: center
-}
-
-.img-fill img {
-  min-height: 100%;
-  min-width: 100%;
-  position: relative;
-  display: inline-block;
-  max-width: none;
 }
 
 *,
@@ -774,13 +758,12 @@ banner
   padding: 0;
 } 
 
-
 /* ==== Slider Style === */
 .Modern-Slider .item .img-fill{
   height:500px;
   max-height: 500px;
-  background:#000;
-  overflow: hidden;
+  background:var(--base-color);
+  /* overflow: hidden; */
 }
 
 .Modern-Slider .item .img-fill img {
@@ -865,7 +848,7 @@ ul.slick-dots {
   position: relative;
 }
 
-.Modern-Slider {background:#000;}
+.Modern-Slider {background:var(--base-color);}
 
 
 /* ==== Slick Slider Css Ruls === */
@@ -904,6 +887,9 @@ about
   height: 170px;
   width: 170px;
   overflow: hidden;
+  border-color: var(--accent-color);
+  border-width: 10px;
+  border-style: double;
 }
 
 #about .left-text-content p {
@@ -945,6 +931,9 @@ about
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajuste visual más bonito, opcional */
+  border-color: var(--accent-color);
+  border-width: 10px;
+  border-style: groove;
 }
 
 
@@ -1549,7 +1538,7 @@ offers
   padding-top: 10px;
   font-size: 20px;
   font-weight: 700;
-  color: var(--text-color);
+  color: var(--accent-color);
   margin-bottom: 10px;
   margin-right: 100px;
 }
@@ -1745,6 +1734,9 @@ responsive
       width: 100%;
       height: 80%;
       margin-bottom: 15px;
+      border-color: var(--accent-color);
+      border-width: 10px;
+      border-style: double;
     }
 
     #about .row > .col-4 {
@@ -1782,7 +1774,7 @@ responsive
     position: relative;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 9 / 16;
     overflow: hidden;
   }
 
