@@ -1,4 +1,3 @@
-
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
@@ -7,14 +6,15 @@ Table of contents
 03. global styles
 04. header
 05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
-
+06. about 
+07. menu
+08. features
+09. testimonials
+10. contact
+11. footer
+12. preloader
+13. search
+14. portfolio
 --------------------------------------------- */
 /* 
 ---------------------------------------------
@@ -273,6 +273,19 @@ header
   line-height: 75px;
 }
 
+/* Ajuste específico para el logo */
+.logo img {
+    height: 60px;
+    width: auto;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Ajuste para el estado "background-header" (scroll) */
+.background-header .logo img {
+    height: 40px; /* Reduce ligeramente el logo al hacer scroll */
+  }
+
 .background-header .nav {
   margin-top: 20px !important;
 }
@@ -404,6 +417,14 @@ header
   transition-delay: 0s, 0s, 0.3s;
 }
 
+.header-area .main-nav .nav li.submenu.open ul {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 0s;
+}
+
 .header-area .main-nav .menu-trigger {
   cursor: pointer;
   display: block;
@@ -531,20 +552,6 @@ header
   color: var(--contrast-color);
 }
 
-/* Ajuste específico para el logo */
-.logo img {
-    height: 140px;
-    width: auto;
-    transition: all 0.3s ease;
-}
-
-/* Ajuste para el estado "background-header" (scroll) */
-.background-header .logo img {
-    height: 90px; /* Reduce ligeramente el logo al hacer scroll */
-}
-
-
-
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -579,7 +586,7 @@ header
     padding: 0px;
   }
   .header-area .logo {
-    margin-left: 30px;
+    margin-left: 5px; 
   }
   .header-area .menu-trigger {
     display: block !important;
@@ -1118,6 +1125,39 @@ menu
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--text-color);
+}
+
+.section-title p {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: var(--text-color);
+}
+
+.section-title p .description-title {
+  color: var(--accent-color);
+}
+.container .section-title span .description-title {
+  padding-top: 50px;
+}
+
 .contact .info-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1125,7 +1165,7 @@ menu
 }
 
 .contact .info-item .icon {
-  color: var(--contrast-color);
+  color: var(--surface-color);
   background-color: var(--accent-color);
   width: 56px;
   height: 56px;
@@ -1136,6 +1176,8 @@ menu
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
   margin-right: 15px;
+  padding: 16px;
+  overflow: visible;
 }
 
 .contact .info-item h3 {
@@ -1654,40 +1696,6 @@ footer .right-text-content ul li a {
 }
 
 /*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-.scroll-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: -15px;
-  z-index: 99999;
-  background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.scroll-top i {
-  font-size: 24px;
-  color: var(--text-color);
-  line-height: 0;
-}
-
-.scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--text-color);
-}
-
-.scroll-top.active {
-  visibility: visible;
-  opacity: 1;
-  bottom: 15px;
-}
-
-/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
@@ -1715,11 +1723,17 @@ responsive
     }
     .header-area .main-nav .nav li {
       padding-right: 5px;
-      padding-left: 5px;
+      padding-left: 5px; 
     }
     .header-area .main-nav .nav li a {
       font-size: 14px;
       letter-spacing: 0px;
+    }
+    .main-nav .logo {
+      order: 1;
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 0;
     }
     #top .left-content {
       text-align: center;
@@ -1865,20 +1879,16 @@ responsive
   }
 }
 
-
-
 @media (min-width: 992px) {
   #about .right-content {
     height: 100%;
     display: flex;
     align-items: stretch;
   }
-
   #about .right-content .thumb {
     flex: 1;
     position: relative;
   }
-
   .video-container {
     position: absolute;
     top: 0;
@@ -1886,7 +1896,6 @@ responsive
     right: 0;
     bottom: 0;
   }
-
   .video-container video {
     width: 100%;
     height: 100%;
