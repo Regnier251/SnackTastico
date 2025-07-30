@@ -3,27 +3,78 @@ const express = require('express');
 const twilio = require('twilio');
 const cors = require('cors');
 const path = require('path');
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+
 const app = express();
 
-// Middlewares clave
-app.use(express.static(path.join(__dirname, 'public')));
+// Configuración de middlewares básicos
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
+// Configuración de Twilio
 const client = twilio(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
 
-// Ruta para la raíz
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+const apiLimiter = rateLimit({
+  windowMs: 48 * 60 * 60 * 1000, // 48 horas
+  max: 10,
+  message: 'Has excedido el límite de peticiones',
+  standardHeaders: true,
+  legacyHeaders: false,
+  keyGenerator: (req) => {
+    // Manejo correcto para IPv4/IPv6 y proxies
+    const forwarded = req.headers['x-forwarded-for'];
+    const ip = forwarded ? forwarded.split(',')[0] : req.socket.remoteAddress;
+    return ip.replace(/:\d+$/, ''); // Elimina puerto si existe
+  }
 });
 
-// Ruta para WhatsApp
-app.post('/enviar-whatsapp', async (req, res) => {
+// Agrega esto después de los otros middlewares y antes de las rutas
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "https://code.jquery.com",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "https://unpkg.com"
+      ],
+      scriptSrcElem: [
+        "'self'",
+        "https://code.jquery.com",
+        "https://cdn.jsdelivr.net",
+        "https://cdnjs.cloudflare.com",
+        "https://unpkg.com"
+      ],
+      frameSrc: ["'self'", "https://maps.google.com"],
+      imgSrc: ["'self'", "data:", "https://*"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+      fontSrc: ["'self'", "https://cdn.jsdelivr.net"],
+      connectSrc: ["'self'", process.env.TWILIO_API_URL || "https://api.twilio.com"]
+    }
+  }
+}));
+
+// Rutas
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.post('/enviar-whatsapp', apiLimiter, async (req, res) => {
   try {
     const { name, phone, guests, date, time, message } = req.body;
+    
+    if (!name || !phone || !guests || !date || !time) {
+      return res.status(400).json({ error: 'Faltan campos obligatorios' });
+    }
+
     const whatsappBody = `
       *Nueva reservación* 🎉
       ▸ 👤 *Nombre:* ${name}
@@ -31,22 +82,36 @@ app.post('/enviar-whatsapp', async (req, res) => {
       ▸ 🧑‍🤝‍🧑 *Personas:* ${guests}
       ▸ 🗓️ *Fecha:* ${date}
       ▸ ⏰ *Hora:* ${time}
+      ${message ? `▸ 📝 *Mensaje:* ${message}` : ''}
     `;
+
     const response = await client.messages.create({
       body: whatsappBody,
-      from: 'whatsapp:+14155238886',
-      to: 'whatsapp:+5214731248333'
+      from: process.env.TWILIO_WHATSAPP_FROM,
+      to: process.env.TWILIO_WHATSAPP_TO
     });
-    res.json({ success: true, sid: response.sid });
+
+    res.json({ 
+      success: true, 
+      sid: response.sid,
+      message: 'Mensaje enviado correctamente'
+    });
   } catch (error) {
     console.error("Error Twilio:", error);
     res.status(500).json({ 
-      error: "Usa una plantilla preaprobada. Detalle: " + error.message 
+      error: "Error al enviar el mensaje. Detalle: " + error.message 
     });
   }
 });
 
+
+// Manejo de errores 404
+app.use((req, res) => {
+  res.status(404).send('Página no encontrada');
+});
+
+// Iniciar servidor
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Servidor en puerto ${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

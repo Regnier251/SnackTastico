@@ -14,8 +14,6 @@
 	  }
 	});
 	
-	$('.input-group.date').datepicker({format: "dd.mm.yyyy"});
-	
 	$('.filters ul li').click(function(){
 	  $('.filters ul li').removeClass('active');
 	  $(this).addClass('active');
@@ -155,20 +153,20 @@
 	    });
 	});
 
-	function onScroll(event){
-	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
-	        }
-	    });
-	}
+	// function onScroll(event){
+	//     var scrollPos = $(document).scrollTop();
+	//     $('.nav a').each(function () {
+	//         var currLink = $(this);
+	//         var refElement = $(currLink.attr("href"));
+	//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	//             $('.nav ul li a').removeClass("active");
+	//             currLink.addClass("active");
+	//         }
+	//         else{
+	//             currLink.removeClass("active");
+	//         }
+	//     });
+	// }
 
 	function onScroll(event) {
 		var scrollPos = $(document).scrollTop();
@@ -232,6 +230,27 @@
 			// Añade la clase 'selected' a la tarjeta que fue clickeada
 			$(this).addClass('selected');
 		});
+	});
+
+	$(function() {
+		const $pet = $('#animatedPet');
+		const images = [
+			"assets/images/Charcutería_Negro-01.png",
+			"assets/images/Charcutería_Negro-02.png"
+		];
+		
+		// Precarga imágenes
+		$.each(images, function(i, img) {
+			new Image().src = img; 
+		});
+
+		let index = 0;
+		setInterval(() => {
+			index = (index + 1) % images.length;
+			$pet.fadeOut(0, function() {
+			$(this).attr('src', images[index]).fadeIn(0);
+			});
+		}, 2000); // Cambia cada 3 segundos con efecto fade
 	});
 
 })(window.jQuery);
