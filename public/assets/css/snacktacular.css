@@ -1812,6 +1812,36 @@ offers
   }
 }
 
+.tab-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(20px);
+}
+
+.tab-pane.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.tab-pane.exit {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* Contenedor para posición relativa */
+.tabs-content-container {
+  position: relative;
+  min-height: 300px; /* Ajustar según necesidad */
+  overflow: hidden;
+}
+
 /* 
 ---------------------------------------------
 footer
