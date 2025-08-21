@@ -17,18 +17,7 @@ Twilio Account SID y Auth Token: Necesarios para autenticar la API de Twilio.
 
 Twilio WhatsApp Numbers: Un número de Twilio habilitado para enviar y recibir mensajes por WhatsApp.
 
-📁 Estructura del proyecto
-bash
-Copiar
-Editar
-reservas-whatsapp/
-├── public/
-│   └── index.html            # Página estática para el formulario de reserva
-├── .env                      # Variables de entorno (Twilio API y configuraciones)
-├── index.js                  # Lógica principal del servidor Express
-├── package.json              # Dependencias y scripts de ejecución
-├── README.md                 # Este archivo
-└── .gitignore                # Archivos ignorados por Git
+
 📦 Instalación
 Clona el repositorio:
 
