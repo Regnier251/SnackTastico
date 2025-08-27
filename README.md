@@ -1,98 +1,141 @@
-Proyecto Twilio - Enviar Reservaciones por WhatsApp
-Este proyecto permite recibir reservas de eventos a través de un formulario web y enviar las reservaciones a un número de WhatsApp utilizando la API de Twilio. Es ideal para restaurantes, eventos o negocios que gestionen reservas y quieran recibirlas por WhatsApp de manera automatizada.
+# 📲 Proyecto Twilio - Enviar Reservaciones por WhatsApp
 
-🚀 Características
-Formulario de reservación: Recoge nombre, teléfono, número de personas, fecha, hora y mensaje opcional.
+Este proyecto permite recibir reservas de eventos a través de un formulario web y enviarlas a un número de WhatsApp utilizando la API de Twilio. Es ideal para restaurantes, eventos o negocios que gestionen reservas y quieran recibirlas por WhatsApp de forma automatizada.
 
-Twilio API: Utiliza Twilio para enviar la reservación a WhatsApp de forma automática.
+---
 
-Seguridad y optimización: Incluye medidas de seguridad básicas como CORS, helmet para protección de cabeceras HTTP, y limitación de solicitudes para evitar abusos.
+## 🚀 Características
 
-Validación de datos: Requiere ciertos campos obligatorios antes de enviar el mensaje.
+- **Formulario de reservación**: Recoge nombre, teléfono, número de personas, fecha, hora y mensaje opcional.
+- **Twilio API**: Utiliza Twilio para enviar automáticamente la reservación a WhatsApp.
+- **Seguridad y optimización**: 
+  - CORS habilitado
+  - Helmet para protección de cabeceras HTTP
+  - Limitación de solicitudes por IP
+- **Validación de datos**: Requiere campos obligatorios antes de enviar el mensaje.
 
-⚙️ Requisitos
-Node.js (versiones recomendadas: 14.x o superior)
+---
 
-Twilio Account SID y Auth Token: Necesarios para autenticar la API de Twilio.
+## ⚙️ Requisitos
 
-Twilio WhatsApp Numbers: Un número de Twilio habilitado para enviar y recibir mensajes por WhatsApp.
+- Node.js (versión 14.x o superior)
+- Cuenta de Twilio (Account SID y Auth Token)
+- Número de Twilio habilitado para WhatsApp
 
+---
 
-📦 Instalación
-Clona el repositorio:
+## ⚙️ Dependencias
+- express: Framework para servidor web.
+- twilio: Cliente oficial para Twilio.
+- cors: Middleware para habilitar CORS.
+- helmet: Seguridad HTTP.
+- express-rate-limit: Limitador de peticiones.
+- dotenv: Carga variables de entorno.
 
-bash
-Copiar
-Editar
+---
+
+## 📦 Instalación
+
+1. **Clona el repositorio**
+
+```bash
 git clone <URL_DEL_REPOSITORIO>
 cd reservas-whatsapp
-Instala las dependencias:
+Instala las dependencias
+```
 
-Asegúrate de tener Node.js instalado, luego ejecuta:
+Asegúrate de tener Node.js instalado:
 
-bash
-Copiar
-Editar
+```bash
 npm install
-Configura las variables de entorno:
+Configura las variables de entorno
+```
 
-Crea un archivo .env en la raíz del proyecto con las siguientes claves:
+Crea un archivo .env en la raíz del proyecto con el siguiente contenido:
 
-env
-Copiar
-Editar
+```env
 TWILIO_ACCOUNT_SID=tu_account_sid_de_twilio
 TWILIO_AUTH_TOKEN=tu_auth_token_de_twilio
 TWILIO_WHATSAPP_FROM=whatsapp:+1415XXXXXXX  # Número de Twilio habilitado para WhatsApp
-TWILIO_WHATSAPP_TO=whatsapp:+5244XXXXXXX  # Número de destino donde se recibirá la reserva
-PORT=8080  # (Opcional) Puerto en el que se ejecutará el servidor
-🏃‍♂️ Ejecución
-Ejecuta el servidor localmente con el siguiente comando:
+TWILIO_WHATSAPP_TO=whatsapp:+5244XXXXXXX    # Número de destino para recibir la reserva
+PORT=8080                                    # (Opcional) Puerto del servidor
+```
 
-bash
-Copiar
-Editar
+---
+
+## 🏃‍♂️ Ejecución
+Inicia el servidor con el siguiente comando:
+
+```bash
+Copy code
 npm start
-El servidor se iniciará en http://localhost:8080 por defecto. Si el puerto 8080 ya está en uso, puedes cambiarlo a otro puerto configurando la variable PORT en el archivo .env.
+```
 
-🌐 Uso
-Formulario de reserva: Dirígete a http://localhost:8080/ y completa el formulario con los detalles de la reservación.
+El servidor se ejecutará por defecto en:
+👉 http://localhost:8080
 
-Cuando el formulario sea enviado, los datos serán enviados a través de la API de Twilio como un mensaje de WhatsApp al número configurado.
+Puedes cambiar el puerto desde el archivo .env.
 
-Limitación de solicitudes
-El servidor está configurado para permitir un máximo de 10 solicitudes cada 48 horas desde la misma dirección IP, con el fin de evitar abusos de la API. Si excedes el límite, recibirás el siguiente mensaje de error:
+---
+
+## 🌐 Uso
+Accede al formulario en: http://localhost:8080/
+
+Completa los datos de la reservación.
+
+Al enviar el formulario, los datos se enviarán como un mensaje de WhatsApp usando la API de Twilio al número configurado.
+
+---
+
+## 🚫 Limitación de solicitudes
+El servidor permite un máximo de 10 solicitudes cada 48 horas por IP para evitar abuso de la API.
+Si excedes el límite, recibirás el siguiente mensaje de error:
+
+nginx
+Copy code
 Has excedido el límite de peticiones.
 
-🛠️ Middleware y Seguridad
-CORS: Habilitado para permitir solicitudes desde dominios específicos.
+---
 
-Rate Limiting: Limitación de solicitudes a 10 peticiones cada 48 horas para evitar el abuso de la API.
+## 🛠️ Middleware y Seguridad
+CORS: Control de acceso desde dominios específicos.
 
-Helmet: Protección contra ataques comunes de seguridad en HTTP.
+Rate Limiting: Límite de 10 solicitudes cada 48 horas por IP.
 
-dotenv: Se utiliza para cargar las variables de entorno desde el archivo .env para proteger las credenciales y configuraciones sensibles.
+Helmet: Protección contra vulnerabilidades HTTP comunes.
 
-🐛 Manejo de Errores
-Si hay algún error en el proceso de envío del mensaje a través de Twilio, se devuelve un mensaje detallado de error. Si los datos enviados no son completos o están mal formateados, se informará con un mensaje de error.
+dotenv: Manejo seguro de variables de entorno.
 
-🔒 Seguridad
-Asegúrate de que tu archivo .env no esté subido a tu repositorio. Este archivo contiene información sensible como las claves de Twilio. Para evitar esto, agrega .env al archivo .gitignore.
+---
 
-📸 Captura de pantalla
+## 🐛 Manejo de errores
+Si ocurre un error al enviar el mensaje por Twilio, se mostrará un mensaje de error detallado.
 
-📜 Licencia
-Este proyecto está bajo la licencia MIT.
+Si los datos enviados están incompletos o mal formateados, también se notificará con un mensaje adecuado.
 
-⚙️ Dependencias
-express: Framework para crear aplicaciones web.
+---
 
-twilio: Librería para interactuar con la API de Twilio.
+## 🔒 Seguridad
+⚠️ IMPORTANTE: No subas tu archivo .env al repositorio.
+Este archivo contiene credenciales sensibles como tus claves de Twilio.
 
-cors: Middleware para habilitar CORS.
+Agrega .env a tu archivo .gitignore:
 
-path: Utilidad para manejar rutas de archivos.
+```bash
+Copy code
+echo .env >> .gitignore
+```
 
-rate-limit: Limita el número de solicitudes en un tiempo determinado.
+---
 
-helmet: Middleware para proteger cabeceras HTTP.
+## 📸 Captura de pantalla
+(Aquí puedes agregar una imagen del formulario o del mensaje en WhatsApp)
+
+---
+
+## 📜 Licencia
+Este proyecto está licenciado bajo la licencia MIT.
+
+path: Manejo de rutas de archivos en Node.js.
+
+¡Gracias por usar este proyecto! Si te fue útil, considera darle una ⭐ al repositorio.
