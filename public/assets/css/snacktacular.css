@@ -314,6 +314,7 @@ body {
   font-size: 50px;
   font-weight: 900;
   color: var(--text-color);
+  word-spacing: 14px;
 }
 
 
@@ -1400,6 +1401,7 @@ menu
   font-weight: 400;
   padding: 0;
   margin-bottom: 20px;
+  margin-top: 30px;
   color: color-mix(in srgb, var(--contrast-color), transparent 40%);
   display: inline-block;
   text-transform: uppercase;
@@ -1498,7 +1500,7 @@ iframe {
 }
 
 /* mantiene icono y texto alineados arriba */
-.map .info-item .icon { flex: 0 0 56px; margin-right: 0; } /* el icono no se encoge */
+.map .info-item .icon { flex: 0 0 56px; margin-right: 5px; } /* el icono no se encoge */
 
 /* Evitar desbordes en textos largos (email/dirección/teléfonos) */
 .map .info-item h3,
@@ -2181,7 +2183,6 @@ responsive
 
   .map .info-item .icon {
     width: 48px;
-    height: 48px;
     padding: 12px;
   }
 }
