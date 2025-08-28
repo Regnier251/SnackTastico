@@ -2002,8 +2002,6 @@ offers
 @media (max-width: 992px) {
   #offers .heading-tabs .row>div {
     padding: 0 15px;
-    display: flex;
-    justify-content: center;
   }
 
   #offers #tabs ul {
