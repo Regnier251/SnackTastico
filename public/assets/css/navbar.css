@@ -1,0 +1,304 @@
+/* Estilos base del navbar */
+.navbar {
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    background-color: rgba(210, 192, 223, 0.95);
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    min-height: 80px;
+}
+
+.navbar.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    min-height: 55px;
+}
+
+.navbar .container {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.navbar-scrolled .container {
+    height: 55px;
+}
+
+/* Botón de reservación */
+.btn-reservation {
+    position: relative;
+    overflow: hidden;
+    background-color: #71896A;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    border: 2px solid #71896A;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-reservation:hover {
+    background-color: #d2c0df;
+    border-color: #1d3218;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Efecto ripple */
+.btn-reservation .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    pointer-events: none;
+    animation: ripple-animation 0.6s linear;
+}
+
+/* Estilos del botón hamburguesa */
+.navbar-toggler {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: none;
+    background: transparent;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transform: rotate(0deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    background-image: url('../images/close.png');
+    transform: rotate(180deg);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.navbar.navbar-scrolled {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+}
+
+.navbar.navbar-scrolled .nav-link {
+    color: #1d3218 !important;
+}
+
+.navbar.navbar-scrolled .btn-reservation {
+    background-color: #71896A;
+    border-color: #71896A;
+    color: #fff;
+}
+
+.navbar.navbar-scrolled .btn-reservation:hover {
+    background-color: transparent;
+    color: #71896A;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1031;
+}
+
+.logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+.navbar-scrolled .logo-img {
+    height: 45px;
+}
+
+.navbar .nav-link {
+    color: var(--contrast-color) !important;
+    font-size: 1rem;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active {
+    color: #71896A !important;
+    font-weight: 600;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #71896A;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar .nav-link.active::after {
+    width: 30px;
+}
+
+.navbar .nav-link:hover::after {
+    width: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar .nav-link:hover {
+    color: #71896A !important;
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link.active {
+    color: #71896A !important;
+    font-weight: 600;
+}
+
+.navbar .nav-link.active:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: #71896A;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+/* Estado con scroll */
+.navbar.background-header {
+    background-color: rgba(210, 192, 223, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.5rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.navbar.background-header .nav-link {
+    color: #1d3218 !important;
+}
+
+.navbar.background-header .nav-link:hover {
+    color: #71896A !important;
+}
+
+/* Botón de menú móvil */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    right: 25px;
+    background: transparent !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    left: 3px;
+}
+
+.navbar-toggler-icon:before {
+    top: 8px;
+}
+
+.navbar-toggler-icon:after {
+    bottom: 8px;
+}
+
+.background-header .navbar-toggler-icon:before,
+.background-header .navbar-toggler-icon:after {
+    background-color: #1d3218;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(210, 192, 223, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .navbar .nav-link {
+        color: #1d3218 !important;
+        padding: 0.75rem 1rem !important;
+    }
+
+    .navbar .nav-item:last-child .nav-link {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+}

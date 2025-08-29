@@ -16,6 +16,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/assets/css/snacktacular.css">
+        <link rel="stylesheet" href="/assets/css/navbar.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/assets/css/lightbox.css">
     </head>
@@ -30,52 +31,45 @@
             </div>
         </div>  
         <!-- ***** Preloader End ***** -->
-        
+
         <!-- ***** Header Area Start ***** -->
-        <header class="header-area header-sticky">
+        <nav class="navbar navbar-expand-lg header-area header-sticky fixed-top">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="main-nav">
-                            <!-- ***** Logo Start ***** -->
-                            <a href="index.html" class="logo">
-                                <img src="assets/images/snacktacular-logo.png">
-                            </a>
-                            <!-- ***** Logo End ***** -->
-                            <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                                <li class="scroll-to-section"><a href="#about">Somos</a></li>                    
-                                <li class="submenu">
-                                    <!-- <a href="javascript:;">Menu</a> -->
-                                    <a>Menu</a>
-                                    <ul>
-                                        <li class="scroll-to-section"><a href="#menu">Muestras</a></li>
-                                        <li class="scroll-to-section"><a href="#chefs">Especialidades</a></li> 
-                                        <li class="scroll-to-section"><a href="#offers">Carta</a></li>
-                                    </ul>
-                                </li>
-                                <li class="scroll-to-section"><a href="#map">Ubicación</a></li>
-                                <!-- <li class="submenu">
-                                    <a href="javascript:;">Features</a>
-                                    <ul>
-                                        <li><a href="#">Features Page 1</a></li>
-                                        <li><a href="#">Features Page 2</a></li>
-                                        <li><a href="#">Features Page 3</a></li>
-                                        <li><a href="#">Features Page 4</a></li>
-                                    </ul>
-                                </li> -->
-                                <li class="scroll-to-section"><a href="#reservation">Reservación</a></li> 
-                            </ul>        
-                            <a class='menu-trigger'>
-                                <span>Menu</span>
-                            </a>
-                            <!-- ***** Menu End ***** -->
-                        </nav>
-                    </div>
+                <!-- Logo -->
+                <a class="navbar-brand scroll-to-section" href="#top">
+                    <img src="assets/images/snacktacular-logo.png" alt="SnackTastico" class="logo-img">
+                </a>
+                
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-to-section" href="#about">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-to-section" href="#offers">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-to-section" href="#menu">Favoritos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-to-section" href="#map">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-to-section" href="#chefs">Temporada</a>
+                        </li>
+                    </ul>
+                    <a href="#reservation" class="btn btn-reservation ms-3 scroll-to-section">Reserva Ahora</a>
                 </div>
             </div>
-        </header>
+        </nav>
         <!-- ***** Header Area End ***** -->
 
         <!-- ***** Main Banner Area Start ***** -->
@@ -109,9 +103,7 @@
                             </div>
                              <div class="left-content">
                                 <div class="inner-content">
-                                    <div class="main-white-button scroll-to-section" id="rippleButton" data-aos="fade-up"  data-aos-delay="19000">
-                                        <a href="#reservation">Haz tu reservación</a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -752,9 +744,7 @@
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
                                     <h1 class='title'>Baguette Burrata Serrana</h1>
-                                    <p class='description'>Burrata fresca, jamón serrano, arúgula, reducción de balsámico Y
-                                        tomates cherry confitados en aceite de oliva y especias italianas
-                                        sobre pan crujiente de masa madre</p>
+                                    <p class='description'>Burrata fresca, jamón serrano, arúgula, reducción de balsámico y tomates cherry confitados sobre pan de masa madre.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
                                     </div>
@@ -766,9 +756,7 @@
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
                                     <h1 class='title'>Tablita Violeta</h1>
-                                    <p class='description'>Queso Brie, queso cheddar, queso manchego de tres leches, jamón serrano,
-                                        salami, uvas rojas, fresa, higo, aceitunas rellenas de pimiento, pan de
-                                        baguette, pretzel, miel y mermelada</p>
+                                    <p class='description'>Queso Brie, cheddar, manchego de tres leches, jamón serrano, salami, frutas, aceitunas, pan, pretzel, miel y mermelada.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
                                     </div>
@@ -780,9 +768,7 @@
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
                                     <h1 class='title'>Ensalada Dulce y Curado</h1>
-                                    <p class='description'>Jamón serrano sobre una cama de mezcla de lechugas con
-                                        vinagreta tinta balsámica, tomates cherry, durazno, láminas de
-                                        parmesano y almendras fileteadas</p>
+                                    <p class='description'>Jamón serrano, mezcla de lechugas, vinagreta tinta balsámica, tomates cherry, durazno, parmesano y almendras.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
                                     </div>
@@ -794,7 +780,7 @@
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                     <div class='info'>
                                     <h1 class='title'>Tablita reunión</h1>
-                                    <p class='description'>Cuatro quesos, tres charcuteria, ocho complementos, dos  conservas, pan y pretzels</p>
+                                    <p class='description'>Cuatro quesos, tres charcutería, ocho complementos, dos conservas, pan y pretzels.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
                                     </div>
@@ -806,8 +792,7 @@
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                     <div class='info'>
                                     <h1 class='title'>Ciabatta Manchega Ahumada</h1>
-                                    <p class='description'>Pan de masa madre, aderezo de mostaza miel, queso manchego
-                                        natural, jamón ahumado, mix de lechugas y tomate fresco</p>
+                                    <p class='description'>Pan de masa madre, aderezo de mostaza miel, queso manchego natural, jamón ahumado, mix de lechugas y tomate fresco.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación<i class="fa fa-angle-down"></i></a></div>
                                     </div>
@@ -818,8 +803,8 @@
                             <div class='card card6'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
-                                    <h1 class='title'>3V Casa Madero</h1>
-                                    <p class='description'>Vinos variados como Casa Madero, Concha y Toro y Finca Las Moras Dulce, junto con el Clericot blanco, ofrecen opciones desde tintos y blancos hasta bebidas dulces y refrescantes.</p>
+                                    <h1 class='title'>Selección de vinos</h1>
+                                    <p class='description'>Vinos variados, opciones desde tintos y blancos hasta bebidas dulces y refrescantes.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
                                     </div>
@@ -1149,6 +1134,7 @@
                 }
             });
         </script>
+
 
         <!-- jQuery (con fallback local) -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

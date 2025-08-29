@@ -1,13 +1,37 @@
 (function ($) {
   "use strict";
 
-  // Header scroll effect
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var box = $('.header-text').height();
-    var header = $('header').height();
+  // Manejar el scroll y la navegación
+  $(document).ready(function() {
+    // Manejar el scroll
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 50) {
+        $(".navbar").addClass("navbar-scrolled");
+      } else {
+        $(".navbar").removeClass("navbar-scrolled");
+      }
+    });
 
-    $("header").toggleClass("background-header", scroll >= box - header);
+    // No añadimos nuevo manejador para scroll-to-section aquí
+    // ya que usaremos el existente en la parte inferior del archivo
+
+    // Actualizar enlace activo al hacer scroll
+    $(window).scroll(function() {
+      let scrollPos = $(document).scrollTop();
+      $('.scroll-to-section').each(function() {
+        let target = $(this).attr('href');
+        if (target && target.startsWith('#')) {
+          let section = $(target);
+          if (section.length) {
+            if (section.position().top <= scrollPos + 100 && 
+                section.position().top + section.height() > scrollPos) {
+              $('.nav-link').removeClass('active');
+              $(this).addClass('active');
+            }
+          }
+        }
+      });
+    });
   });
   
 
@@ -52,6 +76,9 @@
     dots: true,
     nav: true,
     autoplay: true,
+    autoplayTimeout: 7000,
+    autoplaySpeed: 1000,      // Duración de la transición
+    smartSpeed: 1000,         // Velocidad de animación suave
     margin: 30,
     responsive: {
       0: { items: 1 },
@@ -72,10 +99,10 @@
   window.sr = new scrollReveal();
 
   // Menu dropdown toggle
-  $(".menu-trigger").on('click', function() {
-    $(this).toggleClass('active');
-    $('.header-area .nav').slideToggle(200);
-  });
+  // $(".menu-trigger").on('click', function() {
+  //   $(this).toggleClass('active');
+  //   $('.header-area .nav').slideToggle(200);
+  // });
 
   // Smooth scrolling
   $('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function(e) {
@@ -88,8 +115,15 @@
         if(width < 991) {
           $('.menu-trigger').removeClass('active');
           $('.header-area .nav').slideUp(140);	
-        }				
-        $('html,body').animate({ scrollTop: target.offset().top - 80 }, 160);
+        }
+        
+        // Calcular el offset basado en la altura actual del navbar
+        var navbarHeight = $('.navbar').outerHeight();
+        var extraOffset = 20; // Espacio extra para mejor visibilidad
+        
+        $('html,body').animate({
+          scrollTop: target.offset().top - navbarHeight - extraOffset
+        }, 160);
       }
     }
   });
@@ -98,13 +132,16 @@
 
   function onScroll() {
     var scrollPos = $(document).scrollTop();
+    var navbarHeight = $('.navbar').outerHeight();
+    
     $('.nav a').each(function () {
       var currLink = $(this);
       var target = currLink.data('scroll-target') || currLink.attr('href');
       var refElement = $(target);
       
-      if (refElement.length && refElement.position().top <= scrollPos && 
-          refElement.position().top + refElement.height() > scrollPos) {
+      if (refElement.length && 
+          refElement.position().top - navbarHeight <= scrollPos && 
+          refElement.position().top + refElement.height() > scrollPos + navbarHeight) {
         $('.nav ul li a').removeClass("active");
         currLink.addClass("active");
       } else {
@@ -189,8 +226,9 @@
   if (firstTab) showTab(firstTab);
 
   // Button ripple effect
-  document.querySelector('.main-white-button').addEventListener('mouseenter', function(e) {
+  document.querySelector('.btn-reservation').addEventListener('mouseenter', function(e) {
     const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
     this.appendChild(ripple);
 
     const rect = this.getBoundingClientRect();
@@ -199,6 +237,10 @@
     ripple.style.width = ripple.style.height = `${size}px`;
     ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
     ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+    ripple.addEventListener('animationend', function() {
+      ripple.remove();
+    });
     ripple.classList.add('ripple');
 
     ripple.addEventListener('animationend', () => ripple.remove());
@@ -248,6 +290,31 @@
   // Activar primera pestaña
   const firstTab = tabsContainer.querySelector('.tab-pane');
   if (firstTab) firstTab.classList.add('active');
+
+  // Manejo de tarjetas del menú
+  const cards = document.querySelectorAll('.card');
+    
+  cards.forEach(card => {
+      card.addEventListener('click', function(e) {
+          e.stopPropagation(); // Evitar que el click se propague al documento
+          // Si la tarjeta ya está activa, la desactivamos
+          if (this.classList.contains('active')) {
+              this.classList.remove('active');
+          } else {
+              // Primero removemos active de todas las tarjetas
+              cards.forEach(c => c.classList.remove('active'));
+              // Luego activamos solo la tarjeta clickeada
+              this.classList.add('active');
+          }
+      });
+  });
+
+  // Cerrar tarjeta activa cuando se hace click fuera
+  $(document).on('click', function(event) {
+      if (!$(event.target).closest('.card').length) {
+          $('.card.active').removeClass('active');
+      }
+  });
 });
 
 })(window.jQuery);
