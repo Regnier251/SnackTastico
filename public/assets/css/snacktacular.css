@@ -1723,6 +1723,20 @@ offers
 
 #offers #tabs ul {
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 563px) {
+  #offers #tabs ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 #offers #tabs ul li {

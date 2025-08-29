@@ -12,8 +12,10 @@
       }
     });
 
-    // No añadimos nuevo manejador para scroll-to-section aquí
-    // ya que usaremos el existente en la parte inferior del archivo
+    // Cerrar menú al hacer clic en cualquier enlace
+    $('.nav-link, .navbar-brand, .btn-reservation').on('click', function() {
+      $('.navbar-collapse').collapse('hide');
+    });
 
     // Actualizar enlace activo al hacer scroll
     $(window).scroll(function() {
@@ -77,8 +79,8 @@
     nav: true,
     autoplay: true,
     autoplayTimeout: 7000,
-    autoplaySpeed: 1000,      // Duración de la transición
-    smartSpeed: 1000,         // Velocidad de animación suave
+    autoplaySpeed: 1000,
+    smartSpeed: 1000,  
     margin: 30,
     responsive: {
       0: { items: 1 },
@@ -97,12 +99,6 @@
 
   mobileNav();
   window.sr = new scrollReveal();
-
-  // Menu dropdown toggle
-  // $(".menu-trigger").on('click', function() {
-  //   $(this).toggleClass('active');
-  //   $('.header-area .nav').slideToggle(200);
-  // });
 
   // Smooth scrolling
   $('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function(e) {
@@ -296,20 +292,16 @@
     
   cards.forEach(card => {
       card.addEventListener('click', function(e) {
-          e.stopPropagation(); // Evitar que el click se propague al documento
-          // Si la tarjeta ya está activa, la desactivamos
+          e.stopPropagation();
           if (this.classList.contains('active')) {
               this.classList.remove('active');
           } else {
-              // Primero removemos active de todas las tarjetas
               cards.forEach(c => c.classList.remove('active'));
-              // Luego activamos solo la tarjeta clickeada
               this.classList.add('active');
           }
       });
   });
 
-  // Cerrar tarjeta activa cuando se hace click fuera
   $(document).on('click', function(event) {
       if (!$(event.target).closest('.card').length) {
           $('.card.active').removeClass('active');
