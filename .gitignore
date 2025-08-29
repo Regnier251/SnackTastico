@@ -1,0 +1,6 @@
+# Archivo .gitignore
+node_modules/
+.env
+ngrok.exe
+*.log
+.DS_Store
