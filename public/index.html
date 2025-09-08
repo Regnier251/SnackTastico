@@ -5,14 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="Juan José Ortega Yañez & Daniela Arely Rendon Lopez">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Preconnect and preload fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+        
+        <!-- Load fonts with display swap -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" 
+              rel="stylesheet"
+              media="print"
+              onload="this.media='all'">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" 
+              rel="stylesheet"
+              media="print"
+              onload="this.media='all'">
         
         <title>SnackTacular - Restaurant</title>
+        
+        <!-- Preload critical resources -->
+        <link rel="preload" as="image" href="assets/images/snacktacular-logo.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="/assets/images/about/slide-01.webp" fetchpriority="high">
+        <link rel="preload" as="style" href="/assets/css/snacktacular.css">
+        <link rel="preload" as="style" href="/assets/css/navbar.css">
+
+        <!-- Fallback for font loading -->
+        <noscript>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+        </noscript>
 
         <!-- CSS Files -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="icon"  type="image" href="assets/images/icon-snacktacular.webp">
+        <link rel="icon" type="image" href="assets/images/icon-snacktacular.webp">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/assets/css/snacktacular.css">
@@ -51,7 +76,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link scroll-to-section" href="#about">Nosotros</a>
+                            <a class="nav-link scroll-to-section" href="#about">Detrás del sabor</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link scroll-to-section" href="#offers">Menú</a>
@@ -82,21 +107,46 @@
                             <!-- Item -->
                             <div class="item">
                                 <div class="img-fill">
-                                    <img src="/assets/images/about/slide-01.webp" alt="">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="/assets/images/about/slide-01.webp">
+                                        <source media="(min-width: 768px)" srcset="/assets/images/about/slide-01.webp?w=1024">
+                                        <img src="/assets/images/about/slide-01.webp?w=640" 
+                                             alt="Slide 1" 
+                                             fetchpriority="high" 
+                                             loading="eager"
+                                             width="1920"
+                                             height="1080">
+                                    </picture>
                                 </div>
                             </div>
                             <!-- // Item -->
                             <!-- Item -->
                             <div class="item">
                                 <div class="img-fill">
-                                    <img src="/assets/images/about/slide-02.webp" alt="">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="/assets/images/about/slide-02.webp">
+                                        <source media="(min-width: 768px)" srcset="/assets/images/about/slide-02.webp?w=1024">
+                                        <img src="/assets/images/about/slide-02.webp?w=640" 
+                                             alt="Slide 2" 
+                                             loading="lazy"
+                                             width="1920"
+                                             height="1080">
+                                    </picture>
                                 </div>
                             </div>
                             <!-- // Item -->
                             <!-- Item -->
                             <div class="item">
                                 <div class="img-fill">
-                                    <img src="/assets/images/about/slide-03.webp" alt="">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="/assets/images/about/slide-03.webp">
+                                        <source media="(min-width: 768px)" srcset="/assets/images/about/slide-03.webp?w=1024">
+                                        <img src="/assets/images/about/slide-03.webp?w=640" 
+                                             alt="Slide 3" 
+                                             loading="lazy"
+                                             width="1920"
+                                             height="1080">
+                                    </picture>
                                 </div>
                             </div>
                             <!-- // Item -->
@@ -133,15 +183,6 @@
                                 Creemos que comer no es solo alimentarse, es celebrar. Por eso cada tabla que servimos está pensada para que se vea abundante, se sienta especial y se disfrute en buena compañía.</br>
 
                                 Nuestro compromiso es sencillo: que te sientas como en casa, con la mesa lista y la copa perfecta para compartir.</p>
-                                
-                                <!-- <p>Snacktacular es una marca proveedora de <b>barras de snacks</b> en eventos, desde piñatas, hasta bodas y reuniones empresariales. Tiene
-                                una amplia variedad de productos de la más alta calidad.</br>
-                                Se caracteriza por ser una marca <b>formal</b>, pero sin dejar del lado la
-                                <b>diversión</b>, porque creemos que en todo evento debe de haber una
-                                <b>chispa</b> que lo haga un <b>momento inolvidable.</b></br>
-                                Nos gusta mezclarnos entre todas las edades, pues somos la combinación perfecta que se
-                                <b>adapta</b> a cada evento según su objetivo.</br>
-                                Nos apodan: <a href="#" target="_blank" rel="sponsored"><b>“LA TÍA COOL”</b></a></p> -->
                             </div>
                             <div class="row about-thumbnails">
                                 <div class="col-4" data-aos="fade-right">

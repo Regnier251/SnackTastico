@@ -17,10 +17,27 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Configuración de caché para archivos estáticos (1 semana)
+// Configuración avanzada de caché y optimización para archivos estáticos
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '7d',
-  etag: true
+  etag: true,
+  lastModified: true,
+  setHeaders: (res, path) => {
+    // Cache-Control específico según tipo de archivo
+    if (path.endsWith('.css') || path.endsWith('.js')) {
+      res.setHeader('Cache-Control', 'public, max-age=604800'); // 1 semana
+    } else if (path.endsWith('.webp') || path.endsWith('.jpg') || path.endsWith('.png')) {
+      res.setHeader('Cache-Control', 'public, max-age=2592000'); // 30 días
+    } else if (path.endsWith('.woff2') || path.endsWith('.woff')) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000'); // 1 año
+    }
+    
+    // Habilitar CORS para recursos estáticos
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    // Optimización de compresión
+    res.setHeader('Vary', 'Accept-Encoding');
+  }
 }));
 
 // Configuración de Twilio
@@ -112,7 +129,6 @@ app.post('/enviar-whatsapp', apiLimiter, async (req, res) => {
     });
   }
 });
-
 
 // Manejo de errores 404
 app.use((req, res) => {
