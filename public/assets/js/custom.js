@@ -35,7 +35,6 @@
       });
     });
   });
-  
 
   // Modern Slider
   $(".Modern-Slider").slick({
@@ -167,15 +166,17 @@
     }
   }
 
-  // Initialize when document is ready
+  // DOM readyState
   if (document.readyState === 'loading') {
     window.addEventListener('DOMContentLoaded', function() {
       initCover();
-      hidePreloader();
+      // Delay antes de ocultar el preloader
+      setTimeout(hidePreloader, 1500); 
     });
   } else {
     initCover();
-    hidePreloader();
+    // Delay antes de ocultar el preloader
+    setTimeout(hidePreloader, 1500);
   }
 
   $(window).on('resize', mobileNav);
