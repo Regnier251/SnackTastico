@@ -145,20 +145,44 @@
     });
   }
 
-  // Page loading animation
-  $(window).on('load', function() {
-    if($('.cover').length) {
+  // Page loading animation with performance optimizations
+  function hidePreloader() {
+    var preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    preloader.style.opacity = '0';
+    setTimeout(function() {
+      preloader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }, 600);
+  }
+
+  function initCover() {
+    if ($('.cover').length) {
       $('.cover').parallax({
         imageSrc: $('.cover').data('image'),
         zIndex: '1'
       });
     }
+  }
 
-    $("#preloader").animate({ 'opacity': '0' }, 600, function(){
-      setTimeout(function() {
-        $("#preloader").css("visibility", "hidden").fadeOut();
-      }, 300);
+  // Initialize when document is ready
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', function() {
+      initCover();
+      hidePreloader();
     });
+  } else {
+    initCover();
+    hidePreloader();
+  }
+
+  $(window).on('resize', mobileNav);
+
+  // Menu item selection
+  $('.owl-menu-item .item').on('click', function() {
+    $('.owl-menu-item .item').removeClass('selected');
+    $(this).addClass('selected');
   });
 
   // Animated pet
