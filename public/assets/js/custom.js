@@ -145,46 +145,20 @@
     });
   }
 
-  // Page loading animation with performance optimizations
-  function hidePreloader() {
-    var preloader = document.getElementById('preloader');
-    if (!preloader) return;
-
-    preloader.style.opacity = '0';
-    setTimeout(function() {
-      preloader.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }, 600);
-  }
-
-  function initCover() {
-    if ($('.cover').length) {
+  // Page loading animation
+  $(window).on('load', function() {
+    if($('.cover').length) {
       $('.cover').parallax({
         imageSrc: $('.cover').data('image'),
         zIndex: '1'
       });
     }
-  }
 
-  // DOM readyState
-  if (document.readyState === 'loading') {
-    window.addEventListener('DOMContentLoaded', function() {
-      initCover();
-      // Delay antes de ocultar el preloader
-      setTimeout(hidePreloader, 1500); 
+    $("#preloader").animate({ 'opacity': '0' }, 600, function(){
+      setTimeout(function() {
+        $("#preloader").css("visibility", "hidden").fadeOut();
+      }, 300);
     });
-  } else {
-    initCover();
-    // Delay antes de ocultar el preloader
-    setTimeout(hidePreloader, 1500);
-  }
-
-  $(window).on('resize', mobileNav);
-
-  // Menu item selection
-  $('.owl-menu-item .item').on('click', function() {
-    $('.owl-menu-item .item').removeClass('selected');
-    $(this).addClass('selected');
   });
 
   // Animated pet
