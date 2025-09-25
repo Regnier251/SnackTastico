@@ -24,8 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Only used icons */
-
 /* Angle down - Used in reservation buttons */
 .fa-angle-down:before {
   content: "\f107";

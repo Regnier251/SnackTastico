@@ -5,35 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="Juan José Ortega Yañez & Daniela Arely Rendon Lopez">
-        <!-- Preconnect and preload fonts -->
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+        <!-- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"> -->
         
-        <!-- Load fonts with display swap -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" 
               rel="stylesheet"
               media="print"
               onload="this.media='all'">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" 
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" 
               rel="stylesheet"
               media="print"
-              onload="this.media='all'">
+              onload="this.media='all'"> -->
         
         <title>SnackTacular - Restaurant</title>
         
         <!-- Preload critical resources -->
         <link rel="preload" as="image" href="assets/images/snacktacular-logo.webp" fetchpriority="high">
         <link rel="preload" as="image" href="/assets/images/about/slide-01.webp" fetchpriority="high">
+         <link rel="preload" as="image" href="/assets/images/about/slide-02.webp" fetchpriority="high">
         <link rel="preload" as="style" href="/assets/css/snacktacular.css">
         <link rel="preload" as="style" href="/assets/css/navbar.css">
-
-        <!-- Fallback for font loading -->
-        <noscript>
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-        </noscript>
 
         <!-- CSS Files -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -79,7 +73,7 @@
                             <a class="nav-link scroll-to-section" href="#about">Detrás del sabor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll-to-section" href="#offers">Menú</a>
+                            <a class="nav-link scroll-to-section" href="#carta">Menú</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link scroll-to-section" href="#menu">Favoritos</a>
@@ -88,7 +82,7 @@
                             <a class="nav-link scroll-to-section" href="#map">Contáctanos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll-to-section" href="#chefs">Temporada</a>
+                            <a class="nav-link scroll-to-section" href="#season">Temporada</a>
                         </li>
                     </ul>
                     <a href="#reservation" class="btn btn-reservation ms-3 scroll-to-section">Reserva Ahora</a>
@@ -300,7 +294,7 @@
         <!-- ***** Map Area End ***** -->
 
         <!-- ***** Menu Area Starts ***** -->
-        <section class="section" id="offers">
+        <section class="section" id="carta">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-4 text-center">
@@ -318,11 +312,12 @@
                                     <div class="row">
                                         <div class="col-lg-8 offset-lg-2" data-aos="fade-left">
                                             <ul>
-                                                <li><a href='#tabs-1'><img src="/assets/images/menu/submenu/tab-icon-01.webp" alt="">Tablillas</a></li>
+                                                <li><a href='#tabs-1'><img src="/assets/images/menu/submenu/tab-icon-01.webp" alt="">Tablitas</a></li>
                                                 <li><a href='#tabs-2'><img src="/assets/images/menu/submenu/tab-icon-02.webp" alt="">Baguettes</a></li>
                                                 <li><a href='#tabs-3'><img src="/assets/images/menu/submenu/tab-icon-03.webp" alt="">Ensaladas</a></li>
                                                 <li><a href='#tabs-4'><img src="/assets/images/menu/submenu/tab-icon-04.webp" alt="">Bebidas</a></li>
                                                 <li><a href='#tabs-5'><img src="/assets/images/menu/submenu/tab-icon-05.webp" alt="">Vinos</a></li>
+                                                <li><a href='#tabs-6'><img src="/assets/images/menu/submenu/tab-icon-06.webp" alt="">Tablitas gourmet</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -340,7 +335,7 @@
                                                             <div class="tab-item" data-aos="fade-right">
                                                                 <img src="assets/images/menu/tablita-individual.webp" alt="">
                                                                 <h4>Tablita individual</h4>
-                                                                <p>Dos quesos, una charcutería, cuatro complementos, una conserva, pan y pretzels.</p>
+                                                                <p>Dos quesos, una charcutería, complementos, una conserva, pan y pretzels.</p>
                                                                 <div class="price">
                                                                     <h6>$194.00</h6>
                                                                 </div>
@@ -350,7 +345,7 @@
                                                             <div class="tab-item" data-aos="fade-right">
                                                                 <img src="/assets/images/menu/tablita-para-compartir.webp" alt="">
                                                                 <h4>Tablita para compartir (2-3 personas)</h4>
-                                                                <p>Tres quesos, dos charcuterías, seis complementos, una conserva, pan y pretzels.</p>
+                                                                <p>Tres quesos, dos charcuterías, complementos, una conserva, pan y pretzels.</p>
                                                                 <div class="price">
                                                                     <h6>$350.00</h6>
                                                                 </div>
@@ -366,7 +361,7 @@
                                                             <div class="tab-item" data-aos="fade-right">
                                                                 <img src="/assets/images/menu/tablita-reunion.webp" alt="">
                                                                 <h4>Tablita reunión (3-5 personas)</h4>
-                                                                <p>Cuatro quesos, tres charcuterías, ocho complementos, dos conservas, pan y pretzels.</p>
+                                                                <p>Cuatro quesos, tres charcuterías, complementos, dos conservas, pan y pretzels.</p>
                                                                 <div class="price">
                                                                     <h6>$645.00</h6>
                                                                 </div>
@@ -376,7 +371,7 @@
                                                             <div class="tab-item" data-aos="fade-right">
                                                                 <img src="/assets/images/menu/tablita-violeta.webp" alt="">
                                                                 <h4>Tablita Violeta</h4>
-                                                                <p>Queso Brie, queso cheddar, queso manchego de tres leches, jamón serrano, salami, uvas rojas, fresa, higo, aceitunas rellenas de pimiento, pan de baguette, pretzel, miel y mermelada.</p>
+                                                                <p>Queso Brie, queso cheddar, queso manchego de tres leches, jamón serrano, salami, aceitunas rellenas de pimiento, complementos, pan de baguette, pretzel, miel y mermelada.</p>
                                                                 <div class="price">
                                                                     <h6>$250.00</h6>
                                                                 </div>
@@ -454,7 +449,7 @@
                                                     <div class="left-list">
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/ensalada-dulce-&-curado.webp" alt="Ensalada Caprese">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="Ensalada Caprese">
                                                                 <h4>Ensalada Caprese</h4>
                                                                 <p>Mozzarella, tomates frescos, pesto de albahaca, aceite de oliva extra virgen, vinagre balsámico y albahaca fresca.</p>
                                                                 <div class="price">
@@ -464,7 +459,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/ensalada-dulce-&-curado.webp" alt="Ensalada Dulce y Curado">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="Ensalada Dulce y Curado">
                                                                 <h4>Ensalada Dulce y Curado</h4>
                                                                 <p>Jamón serrano sobre una cama de mezcla de lechugas con vinagreta tinta balsámica, tomates cherry, durazno, láminas de parmesano y almendras fileteadas.</p>
                                                                 <div class="price">
@@ -480,7 +475,7 @@
                                                     <div class="right-list">
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/ensalada-dulce-&-curado.webp" alt="Ensalada Brie&Berry">
+                                                                <img src="/assets/images/menu/ensalada-brie-berry.webp" alt="Ensalada Brie&Berry">
                                                                 <h4>Ensalada Brie&Berry</h4>
                                                                 <p>Queso Brie, espinacas, manzana amarilla, arándanos, nuez de castilla troceada y una lluvia de vinagreta de la casa.</p>
                                                                 <div class="price">
@@ -493,6 +488,7 @@
                                             </div>
                                         </div>
                                     </article>   
+
                                     <!-- BEBIDAS -->
                                     <article id='tabs-4' class="tab-pane">
                                         <div class="row">
@@ -502,9 +498,9 @@
                                                         <!-- Aguas y limonadas -->
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebidas/limonada.webp" alt="">
-                                                                <h4>Limonada mineral</h4>
-                                                                <p>Refrescante limonada con agua mineral.</p>
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
+                                                                <h4>Limonada</h4>
+                                                                <p>Refrescante limonada con agua mineral o natural.</p>
                                                                 <div class="price">
                                                                     <h6>$45.00</h6>
                                                                 </div>
@@ -512,7 +508,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/limonada-frambuesa.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Limonada de frambuesa</h4>
                                                                 <p>Limonada con toque de frambuesa.</p>
                                                                 <div class="price">
@@ -522,9 +518,9 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-naranjada.jpg" alt="">
-                                                                <h4>Naranjada mineral</h4>
-                                                                <p>Bebida de naranja con agua mineral.</p>
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
+                                                                <h4>Naranjada</h4>
+                                                                <p>Bebida de naranja con agua mineral o natural.</p>
                                                                 <div class="price">
                                                                     <h6>$45.00</h6>
                                                                 </div>
@@ -532,7 +528,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-agua.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Agua mineral Garci Crespo</h4>
                                                                 <p>Agua mineral natural.</p>
                                                                 <div class="price">
@@ -542,7 +538,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-agua.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Agua mineral Topochico</h4>
                                                                 <p>Agua mineral con gas.</p>
                                                                 <div class="price">
@@ -554,7 +550,7 @@
                                                         <!-- Sodas -->
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-soda.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Soda Limonata</h4>
                                                                 <p>Soda italiana de limón.</p>
                                                                 <div class="price">
@@ -564,7 +560,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-soda.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Soda Aranciata (Naranja/Limón)</h4>
                                                                 <p>Soda italiana de naranja y limón.</p>
                                                                 <div class="price">
@@ -574,7 +570,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-soda.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Soda Clementina (Mandarina/Naranja)</h4>
                                                                 <p>Soda italiana de mandarina y naranja.</p>
                                                                 <div class="price">
@@ -591,7 +587,7 @@
                                                         <!-- Cafés -->
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-espresso.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Espresso sencillo 30 ml</h4>
                                                                 <p>Café espresso puro y concentrado.</p>
                                                                 <div class="price">
@@ -601,7 +597,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-espresso.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Espresso doble 60 ml</h4>
                                                                 <p>Doble dosis de café espresso.</p>
                                                                 <div class="price">
@@ -611,7 +607,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-americano.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Americano</h4>
                                                                 <p>Café espresso diluido en agua caliente.</p>
                                                                 <div class="price">
@@ -621,7 +617,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-coldbrew.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Cold Brew</h4>
                                                                 <p>Café infusionado en frío durante 12 horas.</p>
                                                                 <div class="price">
@@ -631,7 +627,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-cappuccino.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Cappuccino 220 ml</h4>
                                                                 <p>Espresso con leche vaporizada y espuma de leche.</p>
                                                                 <div class="price">
@@ -641,7 +637,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-latte.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Latte 220 ml</h4>
                                                                 <p>Espresso con más leche vaporizada y poca espuma.</p>
                                                                 <div class="price">
@@ -651,7 +647,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-mocca.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Mocca 220 ml</h4>
                                                                 <p>Café con chocolate, espresso y leche vaporizada.</p>
                                                                 <div class="price">
@@ -661,7 +657,7 @@
                                                         </div>
                                                         <div class="col-lg-12">
                                                             <div class="tab-item">
-                                                                <img src="/assets/images/menu/bebida-chocolate.jpg" alt="">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
                                                                 <h4>Chocolate caliente 220 ml</h4>
                                                                 <p>Chocolate caliente cremoso.</p>
                                                                 <div class="price">
@@ -687,7 +683,7 @@
                                                                 <h4>Sangría Tinta</h4>
                                                                 <p>Sangría tradicional de vino tinto con frutas.</p>
                                                                 <div class="price">
-                                                                    <h6>Copa: $115.00</h6>
+                                                                    <h6>Copa: $125.00</h6>
                                                                     <!-- <h6>Jarra: $340.00</h6> -->
                                                                 </div>
                                                             </div>
@@ -756,6 +752,64 @@
                                             </div>
                                         </div>
                                     </article>
+
+                                    <!-- Tablitas gourmet -->
+                                    <article id='tabs-6' class="tab-pane">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="row">
+                                                    <div class="left-list">
+                                                        <div class="col-lg-12">
+                                                            <div class="tab-item">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
+                                                                <h4>Tablita mini</h4>
+                                                                <p></p>
+                                                                <div class="price">
+                                                                    <h6>$$</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="tab-item">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
+                                                                <h4>Tablita chica</h4>
+                                                                <p></p>
+                                                                <div class="price">
+                                                                    <h6>$$</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="row">
+                                                    <div class="right-list">
+                                                        <div class="col-lg-12">
+                                                            <div class="tab-item">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
+                                                                <h4>Tablita mediana</h4>
+                                                                <p></p>
+                                                                <div class="price">
+                                                                    <h6>$$</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="tab-item">
+                                                                <img src="/assets/images/coming_soon.jpg" alt="">
+                                                                <h4>Tablita grande</h4>
+                                                                <p></p>
+                                                                <div class="price">
+                                                                    <h6>$$</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article> 
                                 </section>
                             </div>
                         </div>
@@ -784,7 +838,7 @@
                             <div class='card card1'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
-                                    <h1 class='title'>Baguette Burrata Serrana</h1>
+                                    <!-- <h1 class='title'>Baguette Burrata Serrana</h1> -->
                                     <p class='description'>Burrata fresca, jamón serrano, arúgula, reducción de balsámico y tomates cherry confitados sobre pan de masa madre.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
@@ -796,7 +850,7 @@
                             <div class='card card2'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
-                                    <h1 class='title'>Tablita Violeta</h1>
+                                    <!-- <h1 class='title'>Tablita Violeta</h1> -->
                                     <p class='description'>Queso Brie, cheddar, manchego de tres leches, jamón serrano, salami, frutas, aceitunas, pan, pretzel, miel y mermelada.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
@@ -808,7 +862,7 @@
                             <div class='card card3'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
-                                    <h1 class='title'>Ensalada Dulce y Curado</h1>
+                                    <!-- <h1 class='title'>Ensalada Dulce y Curado</h1> -->
                                     <p class='description'>Jamón serrano, mezcla de lechugas, vinagreta tinta balsámica, tomates cherry, durazno, parmesano y almendras.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
@@ -820,7 +874,7 @@
                             <div class='card card4'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                     <div class='info'>
-                                    <h1 class='title'>Tablita reunión</h1>
+                                    <!-- <h1 class='title'>Tablita reunión</h1> -->
                                     <p class='description'>Cuatro quesos, tres charcutería, ocho complementos, dos conservas, pan y pretzels.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
@@ -832,7 +886,7 @@
                             <div class='card card5'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                     <div class='info'>
-                                    <h1 class='title'>Ciabatta Manchega Ahumada</h1>
+                                    <!-- <h1 class='title'>Ciabatta Manchega Ahumada</h1> -->
                                     <p class='description'>Pan de masa madre, aderezo de mostaza miel, queso manchego natural, jamón ahumado, mix de lechugas y tomate fresco.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación<i class="fa fa-angle-down"></i></a></div>
@@ -844,7 +898,7 @@
                             <div class='card card6'>
                                 <!-- <div class="price"><h6>$$</h6></div> -->
                                 <div class='info'>
-                                    <h1 class='title'>Selección de vinos</h1>
+                                    <!-- <h1 class='title'>Selección de vinos</h1> -->
                                     <p class='description'>Vinos variados, opciones desde tintos y blancos hasta bebidas dulces y refrescantes.</p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Haz reservación <i class="fa fa-angle-down"></i></a></div>
@@ -859,65 +913,80 @@
         <!-- ***** Slide Area Ends ***** -->
 
         <!-- ***** Special Area Starts ***** -->
-        <section class="section" id="chefs">
+        <section class="section" id="season">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-4 text-center">
-                        <div class="section-heading"  data-aos="fade-up">
-                            <h6>Nuestro especialidades de temporada</h6>
+                        <div class="section-heading" data-aos="fade-up">
+                            <h6>Especialidades de temporada</h6>
                             <h2>Ofrecemos los mejores ingredientes para ti</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="chef-item" data-aos="flip-right">
-                            <div class="thumb">
-                                <div class="overlay"></div>
-                                <!-- <ul class="social-icons">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul> -->
-                                <img src="/assets/images/especialidades-temporada/especialidad-01.webp" alt="Chef #1">
-                            </div>
-                            <div class="down-content">
-                                <h4>Tabla de corazón</h4>
-                                <span>Propuesta de noviazgo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="chef-item" data-aos="flip-left">
-                            <div class="thumb">
-                                <div class="overlay"></div>
-                                <!-- <ul class="social-icons">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                </ul> -->
-                                <img src="/assets/images/especialidades-temporada/especialidad-02.webp" alt="Chef #2">
-                            </div>
-                            <div class="down-content">
-                                <h4>Tablita invidual</h4>
-                                <span>Tu propia tabla con lo más te guste</span>
+                        <div class="season-item" data-aos="flip-right">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="thumb">
+                                        <div class="overlay"></div>
+                                        <img src="/assets/images/especialidades-temporada/especialidad-01.webp" alt="season #1">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Tablita de corazón</h4>
+                                        <span>Propuesta de noviazgo</span>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h4>Tablita de corazón</h4>
+                                        <p>Una romántica propuesta con los mejores ingredientes seleccionados especialmente para una ocasión especial.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="chef-item" data-aos="flip-right">
-                            <div class="thumb">
-                                <div class="overlay"></div>
-                                <!-- <ul class="social-icons">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                </ul> -->
-                                <img src="/assets/images/especialidades-temporada/especialidad-03.webp" alt="Chef #3">
+                        <div class="season-item" data-aos="flip-left">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="thumb">
+                                        <div class="overlay"></div>
+                                        <img src="/assets/images/especialidades-temporada/especialidad-02.webp" alt="season #2">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Tablita invidual</h4>
+                                        <span>Tu propia tabla con lo más te guste</span>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h4>Tablita individual</h4>
+                                        <p>Personaliza tu propia tabla con tus ingredientes favoritos. Una experiencia única a tu medida.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="down-content">
-                                <h4>Tablillas</h4>
-                                <span>Reuniones</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="season-item" data-aos="flip-right">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="thumb">
+                                        <div class="overlay"></div>
+                                        <img src="/assets/images/especialidades-temporada/especialidad-03.webp" alt="season #3">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Tablillas</h4>
+                                        <span>Reuniones</span>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="back-content">
+                                        <h4>Tablillas</h4>
+                                        <p>Perfectas para reuniones y celebraciones. Una variedad de sabores para compartir con amigos y familia.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

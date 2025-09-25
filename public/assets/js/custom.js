@@ -28,7 +28,7 @@
             if (section.position().top <= scrollPos + 100 && 
                 section.position().top + section.height() > scrollPos) {
               $('.nav-link').removeClass('active');
-              $(this).addClass('active');
+              // $(this).addClass('active');
             }
           }
         }
@@ -54,21 +54,21 @@
   });
 
   // Search functionality
-  $('.search-icon a').on("click", function(e) {
-    e.preventDefault();
-    $("#search").addClass("open");
-    $('#search > form > input[type="search"]').focus();
-  });
+  // $('.search-icon a').on("click", function(e) {
+  //   e.preventDefault();
+  //   $("#search").addClass("open");
+  //   $('#search > form > input[type="search"]').focus();
+  // });
 
-  $("#search, #search button.close").on("click keyup", function(e) {
-    if (e.target == this || e.target.className == "close" || e.keyCode == 27) {
-      $(this).removeClass("open");
-    }
-  });
+  // $("#search, #search button.close").on("click keyup", function(e) {
+  //   if (e.target == this || e.target.className == "close" || e.keyCode == 27) {
+  //     $(this).removeClass("open");
+  //   }
+  // });
 
-  $("#search-box").submit(function(e) {
-    e.preventDefault();
-  });
+  // $("#search-box").submit(function(e) {
+  //   e.preventDefault();
+  // });
 
   // Menu items carousel
   $('.owl-menu-item').owlCarousel({

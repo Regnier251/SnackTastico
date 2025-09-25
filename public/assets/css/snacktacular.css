@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-@font-face {
+/* @font-face {
     font-family:'LavigneDisplay';
     src:url('../fonts/AnyConv.com__LavigneDisplay-Italic.woff') format('woff'), url('../fonts/LavigneDisplay-Italic.ttf') format('truetype');
     font-weight:normal;
     font-style:italic
-}
+} */
 :root {
     --primary-color:#d2c0df;
     --accent-color:#71896A;
@@ -13,7 +13,6 @@
     --surface-color:#fff;
     --contrast-color:#1d3218;
     --contrast-primary-color:#72627e;
-    --navbar-height:80px
 }
 body {
     padding-top:var(--navbar-height)
@@ -146,13 +145,7 @@ body,html {
         opacity:0
     }
 }
-.main-white-button:hover {
-    background-color:var(--primary-color);
-    border-color:var(--contrast-color)
-}
-.main-white-button:hover a {
-    color:var(--text-color)
-}
+
 .section-heading h6 {
     position:relative;
     font-size:15px;
@@ -215,7 +208,7 @@ body,html {
     transition:transform 0.3s ease;
     transform:scaleX(1)
 }
-.header-area {
+/* .header-area {
     background-color:transparent;
     position:absolute;
     top:0;
@@ -227,8 +220,8 @@ body,html {
     -moz-transition:all 0.5s ease 0s;
     -o-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s
-}
-.header-area .main-nav {
+} */
+/* .header-area .main-nav {
     min-height:80px;
     background:transparent;
     transition:all 0.3s ease-in-out
@@ -269,7 +262,7 @@ body,html {
     -moz-transition:all 0.3s ease 0s;
     -o-transition:all 0.3s ease 0s;
     transition:all 0.3s ease 0s
-}
+} */
 .background-header .main-nav .logo {
     line-height:75px
 }
@@ -315,13 +308,7 @@ body,html {
         stroke-dashoffset:0
     }
 }
-#top .left-content .main-white-button {
-    margin-top:25px;
-    margin-bottom:10px
-}
-#top .left-content .main-white-button a {
-    display:inline-block
-}
+
 *,*:after,*:before {
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
@@ -663,18 +650,7 @@ ul.slick-dots {
         min-width:140px
     }
 }
-@media (max-width: 480px) {
-    .card {
-        min-height:250px
-    }
-    .info {
-        padding:1rem
-    }
-    .description {
-        font-size:0.9rem;
-        margin-bottom:1.25rem
-    }
-}
+
 .card1 {
     background-image:url("../images/muestrario/burrata.webp")
 }
@@ -704,7 +680,7 @@ ul.slick-dots {
     transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
     padding:2rem;
     box-sizing:border-box;
     text-align:center;
@@ -770,7 +746,6 @@ ul.slick-dots {
 }
 .description {
     color:var(--text-color);
-    line-height:1.8;
     margin:0 auto 2rem;
     font-size:1.1rem;
     max-width:85%;
@@ -1005,106 +980,130 @@ iframe {
 .section-title+.section-title {
     margin-top:10px
 }
-#chefs {
-    padding-top:40px
+
+
+/* Especial area start */
+#season {
+    padding-top: 60px;
 }
-#chefs .section-heading {
-    margin-bottom:70px
+
+#season .section-heading {
+    margin-bottom: 70px;
 }
-#chefs .section-heading h6 {
-    padding-left:0
+
+#season .section-heading h6 {
+    padding-left: 0;
 }
-#chefs .section-heading h6:before {
-    display:none
+
+#season .section-heading h6:before {
+    display: none;
 }
-#chefs .chef-item {
-    background-color:#fff;
-    text-align:center;
-    border:1px solid var(--primary-color);
-    padding:5px;
-    transition:all 0.5s;
-    border-radius:3px
+#season .season-item {
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+    transition: all 0.5s;
+    border-radius: 3px;
+    position: relative;
+    height: 638px;
+    perspective: 1000px;
 }
-#chefs .chef-item:hover {
-    border-color:var(--contrast-color)
+
+#season .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
-#chefs .chef-item:hover .down-content h4 {
-    color:var(--contrast-color)
+
+#season .season-item:hover .card-inner {
+    transform: rotateY(180deg);
 }
-#chefs .chef-item .thumb {
-    position:relative
+
+#season .card-front,
+#season .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
 }
-#chefs .chef-item .thumb img {
-    width:100%;
-    overflow:hidden;
-    position:relative
+
+#season .card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
 }
-#chefs .chef-item .thumb .overlay {
-    position:absolute;
-    background-color:var(--accent-color);
-    border-radius:3px;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:1;
-    opacity:0;
-    visibility:hidden;
-    transition:all 0.3s
+
+#season .card-back {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 3px;
 }
-#chefs .chef-item .thumb ul.social-icons {
-    position:absolute;
-    z-index:11;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    width:100%;
-    transition:all 0.5s;
-    opacity:0;
-    visibility:hidden
+
+#season .back-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
 }
-#chefs .chef-item .thumb ul.social-icons li {
-    display:inline-block;
-    margin:0 5px
+
+#season .back-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
 }
-#chefs .chef-item .thumb ul.social-icons li a {
-    width:40px;
-    height:40px;
-    background-color:var(--base-color);
-    color:var(--text-color);
-    border-radius:50%;
-    text-align:center;
-    line-height:40px;
-    display:inline-block;
-    transition:all 0.5s
+
+/*Front card */
+#season .season-item .thumb {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
 }
-#chefs .chef-item .thumb ul.social-icons li a:hover {
-    background-color:var(--base-color)
+
+#season .season-item .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
 }
-#chefs .chef-item:hover .overlay {
-    opacity:0.9;
-    visibility:visible
+
+#season .season-item:hover .overlay {
+    opacity: 0.9;
+    visibility: visible;
 }
-#chefs .chef-item:hover ul.social-icons {
-    opacity:1;
-    visibility:visible
+
+#season .season-item .down-content {
+    padding: 20px 0;
+    flex-shrink: 0;
 }
-#chefs .chef-item .down-content {
-    padding:20px 0
+
+#season .season-item .down-content h4 {
+    transition: all 0.3s;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
 }
-#chefs .chef-item .down-content h4 {
-    transition:all 0.3s;
-    font-size:20px;
-    font-weight:700;
-    color:var(--text-color)
+
+#season .season-item .down-content span {
+    font-size: 14px;
+    color: var(--text-color);
+    padding-left: 2dvb;
+    padding-right: 2dvb;
+    text-align: center;
 }
-#chefs .chef-item .down-content span {
-    font-size:14px;
-    color:var(--text-color);
-    padding-left:2dvb;
-    padding-right:2dvb;
-    text-align:center
-}
+
+/* Reservation start */
 #reservation .section-heading {
     margin-bottom:30px
 }
@@ -1250,7 +1249,7 @@ iframe {
 .table-form::placeholder {
     color:var(--text-color)
 }
-#offers {
+#carta {
     padding-top:120px;
     background-color:#fff;
     margin:120px 2rem 0;
@@ -1261,23 +1260,23 @@ iframe {
     display:flex;
     flex-direction:column
 }
-#offers .section-heading {
+#carta .section-heading {
     margin-bottom:30px;
     margin-top:35px
 }
-#offers .section-heading h6 {
+#carta .section-heading h6 {
     padding-left:0
 }
-#offers .section-heading h6:before {
+#carta .section-heading h6:before {
     display:none
 }
-#offers .heading-tabs {
+#carta .heading-tabs {
     text-align:center
 }
-#offers .heading-tabs .main-dark-button {
+#carta .heading-tabs .main-dark-button {
     text-align:right
 }
-#offers #tabs ul {
+#carta #tabs ul {
     padding:0;
     display:flex;
     justify-content:center;
@@ -1285,7 +1284,7 @@ iframe {
     align-items:center
 }
 @media (max-width: 563px) {
-    #offers #tabs ul {
+    #carta #tabs ul {
         justify-content:flex-start;
         overflow-x:auto;
         flex-wrap:nowrap;
@@ -1293,17 +1292,17 @@ iframe {
         -webkit-overflow-scrolling:touch
     }
 }
-#offers #tabs ul li {
+#carta #tabs ul li {
     display:inline-block;
     margin:0 15px
 }
-#offers #tabs ul li:last-child {
+#carta #tabs ul li:last-child {
     margin-right:0
 }
-#offers #tabs ul li:first-child {
+#carta #tabs ul li:first-child {
     margin-left:0
 }
-#offers #tabs ul li a {
+#carta #tabs ul li a {
     text-transform:capitalize;
     width:100%;
     display:inline-block;
@@ -1313,29 +1312,29 @@ iframe {
     transition:all 0.3s;
     text-align:center
 }
-#offers #tabs ul li a img {
+#carta #tabs ul li a img {
     max-width:30px;
     display:block;
     margin:0 auto 12px
 }
-#offers .tabs-content {
+#carta .tabs-content {
     margin-top:60px;
     text-align:left;
     display:inline-block;
     transition:all 0.3s
 }
-#offers .tabs-content .tab-item {
+#carta .tabs-content .tab-item {
     position:relative;
     margin-bottom:90px
 }
-#offers .tabs-content img {
+#carta .tabs-content img {
     float:left;
     width:100px;
     max-width:100px;
     margin-right:20px;
     border-radius:5px
 }
-#offers .tabs-content h4 {
+#carta .tabs-content h4 {
     padding-top:10px;
     font-size:20px;
     font-weight:700;
@@ -1343,27 +1342,27 @@ iframe {
     margin-bottom:10px;
     margin-right:100px
 }
-#offers .tabs-content p {
+#carta .tabs-content p {
     margin-right:100px;
     display:flex;
     justify-content:center
 }
-#offers .tabs-content .left-list {
+#carta .tabs-content .left-list {
     margin-right:15px
 }
-#offers .tabs-content .right-list {
+#carta .tabs-content .right-list {
     margin-left:15px
 }
-#offers .heading-tabs .row > div {
+#carta .heading-tabs .row > div {
     overflow-x:auto;
     white-space:nowrap
 }
-#offers .tabs-content img {
+#carta .tabs-content img {
     max-width:100px;
     height:auto
 }
 @media (min-width: 769px) {
-    #offers .tabs-content .tab-item {
+    #carta .tabs-content .tab-item {
         align-items:flex-start;
         margin-bottom:40px;
         background:#fff;
@@ -1374,11 +1373,11 @@ iframe {
         padding:0;
         position:relative
     }
-    #offers .tabs-content .tab-item:hover {
+    #carta .tabs-content .tab-item:hover {
         transform:translateY(-5px);
         box-shadow:0 8px 20px rgba(234, 8, 255, 0.15)
     }
-    #offers .tabs-content img {
+    #carta .tabs-content img {
         width:140px;
         height:140px;
         object-fit:cover;
@@ -1386,7 +1385,7 @@ iframe {
         border-radius:0;
         flex-shrink:0
     }
-    #offers .tabs-content .content-container {
+    #carta .tabs-content .content-container {
         flex-grow:1;
         padding:20px 120px 20px 0;
         min-height:140px;
@@ -1394,19 +1393,19 @@ iframe {
         flex-direction:column;
         justify-content:center
     }
-    #offers .tabs-content h4 {
+    #carta .tabs-content h4 {
         font-size:1.4rem;
         margin-bottom:10px;
         font-weight:600;
         padding-top:0
     }
-    #offers .tabs-content p {
+    #carta .tabs-content p {
         font-size:0.95rem;
         color:#555;
         line-height:1.5;
         margin-bottom:0
     }
-    #offers .tabs-content .price {
+    #carta .tabs-content .price {
         position:absolute;
         top:50%;
         right:20px;
@@ -1415,7 +1414,7 @@ iframe {
         height:auto;
         background-color:transparent
     }
-    #offers .tabs-content .price h6 {
+    #carta .tabs-content .price h6 {
         background-color:var(--accent-color);
         color:white;
         font-size:1.5rem;
@@ -1428,36 +1427,36 @@ iframe {
         text-align:center;
         min-width:100px
     }
-    #offers .tabs-content .price h6:hover {
+    #carta .tabs-content .price h6:hover {
         transform:scale(1.05)
     }
-    #offers .left-list,#offers .right-list {
+    #carta .left-list,#carta .right-list {
         width:100%
     }
-    #offers .tabs-content .tab-item p::-webkit-scrollbar {
+    #carta .tabs-content .tab-item p::-webkit-scrollbar {
         width:4px
     }
-    #offers .tabs-content .tab-item p::-webkit-scrollbar-thumb {
+    #carta .tabs-content .tab-item p::-webkit-scrollbar-thumb {
         background-color:var(--primary-color);
         border-radius:4px
     }
 }
 @media (min-width: 1200px) {
-    #offers .tabs-content img {
+    #carta .tabs-content img {
         width:160px;
         height:160px
     }
-    #offers .tabs-content .content-container {
+    #carta .tabs-content .content-container {
         min-height:160px;
         padding:25px 140px 25px 0
     }
-    #offers .tabs-content h4 {
+    #carta .tabs-content h4 {
         font-size:1.5rem
     }
-    #offers .tabs-content p {
+    #carta .tabs-content p {
         font-size:1rem
     }
-    #offers .tabs-content .price h6 {
+    #carta .tabs-content .price h6 {
         font-size:1.6rem;
         padding:14px 20px;
         position:relative;
@@ -1466,24 +1465,24 @@ iframe {
     }
 }
 @media (max-width: 992px) {
-    #offers .heading-tabs .row > div {
+    #carta .heading-tabs .row > div {
         padding:0 15px;
         display:flex;
         justify-content:center
     }
-    #offers .tabs-content .tab-item {
+    #carta .tabs-content .tab-item {
         padding-right:70px
     }
-    #offers .tabs-content img {
+    #carta .tabs-content img {
         max-width:80px
     }
 }
 @media (max-width: 1199px) {
-    #offers {
+    #carta {
         margin:60px 1rem 0;
         padding:1.5rem
     }
-    #offers .tabs-content .tab-item {
+    #carta .tabs-content .tab-item {
         display:flex;
         flex-direction:column;
         margin-bottom:30px;
@@ -1493,7 +1492,7 @@ iframe {
         box-shadow:0 4px 12px rgba(138, 43, 226, 0.1);
         padding-right:0 !important
     }
-    #offers .tabs-content img {
+    #carta .tabs-content img {
         float:none;
         width:100%;
         max-width:100%;
@@ -1501,21 +1500,21 @@ iframe {
         margin-right:0;
         object-fit:cover
     }
-    #offers .tabs-content h4 {
+    #carta .tabs-content h4 {
         padding:15px 15px 5px;
         margin-right:0;
         font-size:1.25rem;
         color:var(--accent-color);
         order:1
     }
-    #offers .tabs-content p {
+    #carta .tabs-content p {
         margin-right:0;
         padding:0 15px;
         display:block;
         justify-content:flex-start;
         order:2
     }
-    #offers .tabs-content .price {
+    #carta .tabs-content .price {
         position:static;
         order:3;
         width:100%;
@@ -1524,7 +1523,7 @@ iframe {
         border-top:1px dashed var(--primary-color);
         text-align:right
     }
-    #offers .tabs-content .price h6 {
+    #carta .tabs-content .price h6 {
         position:static;
         width:auto;
         height:auto;
@@ -1535,19 +1534,19 @@ iframe {
         margin:0;
         display:inline-block
     }
-    #offers .left-list,#offers .right-list {
+    #carta .left-list,#carta .right-list {
         width:100%;
         margin:0
     }
 }
 @media (max-width: 480px) {
-    #offers .tabs-content img {
+    #carta .tabs-content img {
         height:160px
     }
-    #offers .tabs-content h4 {
+    #carta .tabs-content h4 {
         font-size:1.15rem
     }
-    #offers .tabs-content .price h6 {
+    #carta .tabs-content .price h6 {
         font-size:1.3rem
     }
 }
@@ -1669,21 +1668,7 @@ footer .right-text-content ul li a {
     .logo img {
         height:2.5rem
     }
-    .main-white-button {
-        position:relative;
-        overflow:hidden;
-        display:inline-block;
-        padding:10px 20px;
-        background-color:var(--accent-color);
-        border:2px solid var(--accent-color);
-        border-radius:5px;
-        cursor:pointer;
-        transition:background-color 0.4s, border-color 0.4s
-    }
-    .main-white-button a {
-        font-size:13px;
-        padding:10px
-    }
+
     .header-area .main-nav .nav li.submenu:after {
         right:3px
     }
@@ -1705,7 +1690,7 @@ footer .right-text-content ul li a {
         flex:0 0 100%;
         max-width:100%
     }
-    #chefs .chef-item {
+    #season .season-item {
         margin-bottom:30px
     }
     #reservation .phone {
@@ -1716,10 +1701,10 @@ footer .right-text-content ul li a {
         margin-right:10px;
         margin-top:30px
     }
-    #offers .tabs-content .left-list {
+    #carta .tabs-content .left-list {
         margin-right:0
     }
-    #offers .tabs-content .right-list {
+    #carta .tabs-content .right-list {
         margin-left:0
     }
     footer .right-text-content {
@@ -1839,23 +1824,23 @@ footer .right-text-content ul li a {
         object-fit:cover
     }
 }
-#offers .tabs-content {
+#carta .tabs-content {
     position:relative;
     display:block;
     min-height:300px;
     width:100%
 }
-#offers .tabs-content .col-lg-6 > .row {
+#carta .tabs-content .col-lg-6 > .row {
     margin-left:0;
     margin-right:0
 }
-#offers .tabs-content .row > .left-list,#offers .tabs-content .row > .right-list {
+#carta .tabs-content .row > .left-list,#carta .tabs-content .row > .right-list {
     width:100%;
     padding-left:15px;
     padding-right:15px;
     box-sizing:border-box
 }
-#offers .tabs-content .left-list > .col-lg-12,#offers .tabs-content .right-list > .col-lg-12 {
+#carta .tabs-content .left-list > .col-lg-12,#carta .tabs-content .right-list > .col-lg-12 {
     padding-left:0;
     padding-right:0
 }

@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
-const compression = require('compression'); // Nuevo: compresión gzip
+const compression = require('compression');
 
 const app = express();
 
@@ -60,7 +60,7 @@ const apiLimiter = rateLimit({
   }
 });
 
-// Agrega esto después de los otros middlewares y antes de las rutas
+// Middlewares y antes de las rutas
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {

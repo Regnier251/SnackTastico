@@ -8,13 +8,14 @@
     top: 0;
     right: 0;
     left: 0;
+    height:100px;
     z-index: 1030;
-    min-height: 80px;
+    min-height: 85px;
 }
 
 .navbar.navbar-scrolled {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    min-height: 55px;
+    height: 80px;
 }
 
 .navbar .container {
@@ -44,7 +45,7 @@
 }
 
 .btn-reservation:hover {
-    background-color: #d2c0df;
+    background-color: #EDE8D8;
     border-color: #1d3218;
     color: #000000;
     transform: translateY(-2px);
@@ -123,25 +124,21 @@
     }
 }
 
-.navbar.navbar-scrolled {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-}
 
 .navbar.navbar-scrolled .nav-link {
     color: #1d3218 !important;
 }
 
-.navbar.navbar-scrolled .btn-reservation {
-    background-color: #71896A;
+/* .navbar.navbar-scrolled .btn-reservation {
+    background-color: #d2c0df;
     border-color: #71896A;
     color: #fff;
-}
+} */
 
-.navbar.navbar-scrolled .btn-reservation:hover {
+/* .navbar.navbar-scrolled .btn-reservation:hover {
     background-color: transparent;
     color: #71896A;
-}
+} */
 
 .navbar-brand {
     padding: 0;
@@ -173,7 +170,7 @@
 }
 
 .navbar-scrolled .logo-img {
-    height: 40px;
+    height: 46px;
 }
 
 .navbar .nav-link {
@@ -340,9 +337,5 @@
 @media (max-width: 576px) {
     .navbar-brand img {
         height: 50px;
-    }
-    
-    .navbar {
-        padding: 0.5rem 0;
     }
 }
