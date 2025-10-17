@@ -6,20 +6,6 @@
         <meta name="description" content="">
         <meta name="author" content="Juan José Ortega Yañez & Daniela Arely Rendon Lopez">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-        <!-- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"> -->
-        
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" 
-              rel="stylesheet"
-              media="print"
-              onload="this.media='all'">
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" 
-              rel="stylesheet"
-              media="print"
-              onload="this.media='all'"> -->
-        
         <title>SnackTacular - Restaurant</title>
         
         <!-- Preload critical resources -->
@@ -30,14 +16,15 @@
         <link rel="preload" as="style" href="/assets/css/navbar.css">
 
         <!-- CSS Files -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
         <link rel="icon" type="image" href="assets/images/icon-snacktacular.webp">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/assets/css/snacktacular.css">
         <link rel="stylesheet" href="/assets/css/navbar.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/assets/css/lightbox.css">
+        
     </head>
 
     <body>
@@ -102,14 +89,21 @@
                             <div class="item">
                                 <div class="img-fill">
                                     <picture>
-                                        <source media="(min-width: 1200px)" srcset="/assets/images/about/slide-01.webp">
-                                        <source media="(min-width: 768px)" srcset="/assets/images/about/slide-01.webp?w=1024">
-                                        <img src="/assets/images/about/slide-01.webp?w=640" 
-                                             alt="Slide 1" 
-                                             fetchpriority="high" 
-                                             loading="eager"
-                                             width="1920"
-                                             height="1080">
+                                        <source 
+                                            media="(min-width: 1200px)" 
+                                            srcset="/assets/images/about/slide-01.webp?w=1920">
+                                        
+                                        <source 
+                                            media="(min-width: 768px)" 
+                                            srcset="/assets/images/about/slide-01.webp?w=1024">
+                                        
+                                        <img 
+                                            src="/assets/images/about/slide-01.webp?w=640" 
+                                            alt="Slide 1"
+                                            loading="eager"
+                                            fetchpriority="high"
+                                            width="1920"
+                                            height="1080">
                                     </picture>
                                 </div>
                             </div>
@@ -180,13 +174,13 @@
                             </div>
                             <div class="row about-thumbnails">
                                 <div class="col-4" data-aos="fade-right">
-                                    <img src="/assets/images/about/about-thumb-01.webp" alt="">
+                                    <img src="/assets/images/about/about-thumb-01.webp" alt="Copa de vino">
                                 </div>
                                 <div class="col-4" data-aos="fade-up">
-                                    <img src="/assets/images/about/about-thumb-02.webp" alt="">
+                                    <img src="/assets/images/about/about-thumb-02.webp" alt="Ensalada Brie&Berry">
                                 </div>
                                 <div class="col-4 d-none d-lg-block d-md-none d-block" data-aos="fade-left">
-                                    <img src="/assets/images/about/about-thumb-03.webp" alt="">
+                                    <img src="/assets/images/about/about-thumb-03.webp" alt="Tablilla de quesos y embutidos">
                                 </div>
                             </div>
                         </div>
@@ -200,14 +194,14 @@
                             </div>
                             <!-- Imagen 3 visible SOLO en md (768px-991px) -->
                             <div class="d-none d-md-block d-lg-none mt-3 image-extra" data-aos="fade-left">
-                                <img src="/assets/images/about/about-thumb-03.webp" alt="" class="img-fluid" style="margin-top: 150px;">
+                                <img src="/assets/images/about/about-thumb-03.webp" alt="Tabla de quesos" class="img-fluid" style="margin-top: 150px;">
                             </div>
                             
                         </div>
                     </div>
                     <!-- Imagen 3 para móvil (≤767px) -->
                     <div class="col-4 d-block d-md-none d-lg-none order-2" data-aos="fade-left">
-                        <img src="/assets/images/about/about-thumb-03.webp" alt="" class="img-fluid">
+                        <img src="/assets/images/about/about-thumb-03.webp" alt="Tabla de quesos" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -227,7 +221,7 @@
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="mb-5">
-                    <iframe style="width: 100%" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Calle%20de%20Alonso%2020,%20Zona%20Centro,%2036000%20Guanajuato,%20Gto.+(Snacktacular)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <iframe style="width: 100%" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Calle%20de%20Alonso%2020,%20Zona%20Centro,%2036000%20Guanajuato,%20Gto.+(Snacktacular)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" alt="Guanajuato map"></iframe>
                 </div>
                 <!-- End Google Maps -->
 
@@ -1158,10 +1152,10 @@
                         <h4>Síguenos</h4>
                         <div class="right-text-content">
                             <ul class="social-icons social-links d-flex">
-                                <li><a href="https://www.facebook.com/share/1EMU6Lopwa/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/share/1EMU6Lopwa/" alt="facebook icon"><i class="fa fa-facebook"></i></a></li>
                                 <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
-                                <li><a href="https://www.instagram.com/snacktacularmx/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/snacktacularmx/" alt="instagram icon"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1250,19 +1244,20 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
         <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
         <!-- Plugins  -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
         <script src="/assets/js/jquery.counterup.min.js"></script>
+        <script src="/assets/vendor/aos/aos.js"></script>
+
+        
         
         <!-- CDN + Fallback para Owl Carousel -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         
         <script src="/assets/js/slick.js"></script> 
-        <!-- <script src="/assets/js/isotope.js"></script> -->
         <script src="/assets/js/accordions.js"></script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="/assets/js/scrollreveal.min.js"></script>
         <script src="/assets/js/imgfix.min.js"></script>
         <script src="/assets/js/lightbox.js"></script>
@@ -1270,7 +1265,6 @@
         <!-- Custom JS -->
         <script src="/assets/js/custom.js"></script>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         
         <script>
         // Inicialización básica

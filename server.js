@@ -47,7 +47,7 @@ const client = twilio(
 );
 
 const apiLimiter = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000, // 24 horas (más flexible)
+  windowMs: 24 * 60 * 60 * 1000, // 24 horas
   max: 20, // Permite más peticiones
   message: 'Has excedido el límite de peticiones',
   standardHeaders: true,
@@ -88,7 +88,7 @@ app.use(helmet({
   }
 }));
 
-// Rutas
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

@@ -49,26 +49,9 @@
     cssEase: 'linear',
 	fade:true,
     draggable: false,
-    prevArrow: '<button class="PrevArrow"></button>',
-    nextArrow: '<button class="NextArrow"></button>', 
+    prevArrow: '<button class="PrevArrow" alt="PrevArrow"></button>',
+    nextArrow: '<button class="NextArrow" alt="NextArrow"></button>', 
   });
-
-  // Search functionality
-  // $('.search-icon a').on("click", function(e) {
-  //   e.preventDefault();
-  //   $("#search").addClass("open");
-  //   $('#search > form > input[type="search"]').focus();
-  // });
-
-  // $("#search, #search button.close").on("click keyup", function(e) {
-  //   if (e.target == this || e.target.className == "close" || e.keyCode == 27) {
-  //     $(this).removeClass("open");
-  //   }
-  // });
-
-  // $("#search-box").submit(function(e) {
-  //   e.preventDefault();
-  // });
 
   // Menu items carousel
   $('.owl-menu-item').owlCarousel({
@@ -114,7 +97,7 @@
         
         // Calcular el offset basado en la altura actual del navbar
         var navbarHeight = $('.navbar').outerHeight();
-        var extraOffset = 20; // Espacio extra para mejor visibilidad
+        var extraOffset = 20;
         
         $('html,body').animate({
           scrollTop: target.offset().top - navbarHeight - extraOffset

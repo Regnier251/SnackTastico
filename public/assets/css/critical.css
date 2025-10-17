@@ -10,11 +10,6 @@
   --navbar-height: 80px;
 }
 
-body {
-  margin: 0;
-  padding-top: var(--navbar-height);
-  font-family: 'Poppins', sans-serif;
-}
 
 .navbar {
   background-color: var(--surface-color);
