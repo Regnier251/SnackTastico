@@ -49,8 +49,8 @@
     cssEase: 'linear',
 	fade:true,
     draggable: false,
-    prevArrow: '<button class="PrevArrow" alt="PrevArrow"></button>',
-    nextArrow: '<button class="NextArrow" alt="NextArrow"></button>', 
+    prevArrow: '<button class="PrevArrow" aria-label="Banner anterior"></button>',
+    nextArrow: '<button class="NextArrow" aria-label="Banner siguiente"></button>', 
   });
 
   // Menu items carousel
