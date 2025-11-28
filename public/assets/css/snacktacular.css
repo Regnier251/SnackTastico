@@ -220,6 +220,15 @@
 }
 
 @font-face {
+    font-family:'Lavigne Display';
+    src:url('../fonts/AnyConv.com__LavigneDisplay-Italic.woff') format('woff'),
+        url('../fonts/LavigneDisplay-Italic.ttf') format('truetype');
+    font-weight:400;
+    font-style:italic;
+    font-display:swap;
+}
+
+@font-face {
     font-family: 'Poppins';
     src: url('../fonts/Poppins-ExtraBold.eot');
     src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'),
@@ -298,6 +307,16 @@ a {
 h1,h2,h3,h4,h5,h6 {
     margin-top:0;
     margin-bottom:0
+}
+
+h6 {
+    font-family:'Lavigne Display','Poppins',sans-serif;
+    font-weight:600;
+}
+
+footer h6 {
+    font-family:'Lavigne Display','Poppins',sans-serif;
+    font-weight:600;
 }
 ul {
     margin-bottom:0
@@ -1191,10 +1210,14 @@ iframe {
 }
 
 #season .back-content h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: white;
+    width:100%;
+    margin:0 0 18px;
+    padding:12px 18px;
+    font-family:'Lavigne Display','Poppins',sans-serif;
+    font-size:clamp(1.35rem, 2vw, 1.8rem);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
 #season .back-content p {

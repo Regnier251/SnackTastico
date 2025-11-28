@@ -168,6 +168,8 @@
     padding: 0.5rem 1rem !important;
     position: relative;
     transition: color 0.3s ease;
+    font-family: 'Lavigne Display','Poppins',sans-serif;
+    font-weight: 600;
 }
 
 .navbar .nav-link.active {
