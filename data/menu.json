@@ -1,0 +1,550 @@
+{
+  "menu": [
+    {
+      "id": "tabs-1",
+      "name": "ANTIPASTO",
+      "slug": "antipasto",
+      "items": [
+        {
+          "name": "Tabla de bocaditos antipasto",
+          "description": "18 bocaditos en dos versiones: caprese (queso cheddar y tomate cherry) y antipasto de salami, queso gouda, aceituna rellena de pimiento y tomate cherry (Para 3-4 personas. Ideal con vino blanco)",
+          "prices": [
+            "$275"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Tabla de bocaditos mixtos",
+          "description": "18 bocaditos en tres variedades diferentes con quesos, frutas y charcutería: queso gouda con uva verde y blueberrie/queso cheddar con ate y zarzamora/salami con aceituna rellena de pimiento (Para 3-4 personas. Ideal con vino rosado)",
+          "prices": [
+            "$235"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Tabla de Jamón Serrano",
+          "description": "Jamón serrano, aceitunas rellenas de pimiento y queso cheddar (Para 3 personas. Ideal con vino tinto joven) Agrega galletas Breana´s Toast por $180",
+          "prices": [
+            "$585"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Sushi italiano",
+          "description": "A base de jamón serrano, relleno de arúgula, burrata di búfala fresca, tomates deshidratados en hierbas italianas, sal y pimienta, con un toque de glasa balsámica (Ideal con Clericot Blanc para un toque fresco)",
+          "prices": [
+            "$385"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-2",
+      "name": "DEL HUERTO",
+      "slug": "del-huerto",
+      "items": [
+        {
+          "name": "Ensalada Caprese",
+          "description": "Mozzarella y tomate frescos, sobre un espejo de pesto de albahaca y piñones, con aceite de oliva extra virgen y vinagre balsámico",
+          "prices": [
+            "$135"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Ensalada Dulce y Curado",
+          "description": "Mezcla de lechugas con tomate cherry, láminas de parmesano y durazno, almendras fileteadas y lonchas de jamón serrano, bañada de vinagreta de la casa",
+          "prices": [
+            "$255"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Ensalada Otoño Azul",
+          "description": "Hojas de espinaca y arúgula con higos frescos de temporada, queso azul cremoso, nuez de castilla y un toque de miel",
+          "prices": [
+            "$185"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-3",
+      "name": "TABLA DE CROSTINS",
+      "slug": "tabla-de-crostins",
+      "items": [
+        {
+          "name": "Tabla de Crostinis",
+          "description": "Selección de 12 crostinis a base de galleta crocante Breana´s Toast con combinaciones de quesos y charcutería artesanal y frutas: Queso Brie, Higo, Nuez pecana y miel; Queso con pimiento rojo y jamón serrano; Queso de cabra cremoso a las finas hierbas con aceitunas verdes rellenas de pimiento; Queso Brie con mermelada de cereza, jamón serrano, higo y miel (Para 3 a 4 personas. Ideal con vino rosado para equilibrar todos los sabores)",
+          "prices": [
+            "$539"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-4",
+      "name": "BAGUETTES & CIABATTA",
+      "slug": "baguettes-ciabatta",
+      "items": [
+        {
+          "name": "Baguette Capresse",
+          "description": "Pan de masa madre tostado con mozzarella y tomate frescos, pesto de albahaca y piñones, con aceite de oliva y vinagre balsámico Agrega jamón serrano por $48",
+          "prices": [
+            "$169"
+          ],
+          "image": {
+            "src": "/assets/images/menu/baguette-caprese.webp"
+          }
+        },
+        {
+          "name": "Baguette Burrata Serrana",
+          "description": "Pan crujiente de masa madre con burrata di búfala fresca, tomates cherry deshidratados en aceite de oliva y hierbas italianas, arúgula, jamón serrano y reducción de balsámico",
+          "prices": [
+            "$269"
+          ],
+          "image": {
+            "src": "/assets/images/menu/baguette-burratas-serrana.webp"
+          }
+        },
+        {
+          "name": "Baguette Italiano",
+          "description": "Pan de masa madre tostado, stracciatella, hojuelas de chile quebrado, salami cervalat, chorizo pamplona, corned beef y jamón ahumado casero",
+          "prices": [
+            "$229"
+          ],
+          "image": {
+            "src": "/assets/images/menu/baguette-italiano.webp"
+          }
+        },
+        {
+          "name": "Ciabatta Manchega Ahumada",
+          "description": "Pan de masa madre, aderezo de Mostaza Dijon con miel, queso manchego natural, jamón ahumado casero, mix de lechugas y tomate fresco",
+          "prices": [
+            "$139"
+          ],
+          "image": {
+            "src": "/assets/images/menu/ciabatta-manchega-ahumada.webp"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-5",
+      "name": "TABLITAS",
+      "slug": "tablitas",
+      "items": [
+        {
+          "name": "Tablita Violeta",
+          "description": "Tabla especial de la casa que incluye queso Brie cremoso, cheddar suave, manchego tres leches, jamón serrano, uvas rojas, ate de membrillo, higo fresco* y miel. Este conjunto ofrece el equilibrio ideal entre dulzura, suavidad y carácter. *Solo por temporada (Para 2 a 3 personas. Ideal con vino tinto joven)",
+          "prices": [
+            "$355"
+          ],
+          "image": {
+            "src": "/assets/images/menu/tablita-violeta.webp"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-6",
+      "name": "TABLAS GOURMET",
+      "slug": "tablas-gourmet",
+      "items": [
+        {
+          "name": "Tabla para dos",
+          "description": "Ideal para 2 personas. 270 gramos de quesos y charcutería y 200 gramos de complementos más pan crocante artesanal y una conserva",
+          "prices": [
+            "$650"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Tabla para compartir",
+          "description": "Ideal para 4 personas. 510 gramos de quesos y charcutería y 350 gramos de complementos más pan crocante artesanal, galletas y una conserva",
+          "prices": [
+            "$980"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Tabla para celebrar",
+          "description": "Ideal para 8 personas. 840 gramos de quesos y charcutería y 710 gramos de complementos más pan crocante artesanal, galletas y dos conservas",
+          "prices": [
+            "$1350"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Tabla para brindar",
+          "description": "Ideal para 12 personas. 1600 gramos de quesos y charcutería y 1200 gramos de complementos más pan crocante artesanal, galletas y dos conservas",
+          "prices": [
+            "$2350"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-7",
+      "name": "COCTELERÍA Y BEBIDAS",
+      "slug": "cocteleria-y-bebidas",
+      "items": [
+        {
+          "name": "Sangría Tinto de Verano",
+          "description": "Vino tinto con un toque cítrico. Clásica y refrescante",
+          "prices": [
+            "$125"
+            
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Clericot Blanc",
+          "description": "Vino blanco dulce con frutas, con un sutil acento tropical",
+          "prices": [
+            "$50"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Clericot Rouge",
+          "description": "Vino tinto dulce y frutos rojos. Mezcla vibrante y frutal",
+          "prices": [
+            "$50"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Spritz italiano",
+          "description": "Aperol y vino espumoso. Notas amargas, frescas y cítricas",
+          "prices": [
+            "$50"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Sodas italianas",
+          "description": "Limonata, Aranciata y Clementina",
+          "prices": [
+            "$35"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Limonada/Naranjada",
+          "description": "Refresco natural de limón o naranja",
+          "prices": [
+            "$35"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Agua Mineral Topochico",
+          "description": "Agua mineral con gas",
+          "prices": [
+            "$35"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Coca Cola",
+          "description": "Refresco de cola",
+          "prices": [
+            "$35"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-8",
+      "name": "VINOS",
+      "slug": "vinos",
+      "items": [
+        {
+          "name": "Viñedo San Miguel - Latiendo",
+          "description": "Ensamble de tres uvas: Malbec, Syrah y Merlot",
+          "prices": [
+            "$160"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Viñedo San Miguel - Merlot",
+          "description": "Vino tinto Merlot",
+          "prices": [
+            "$1000"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Viñedo San Miguel - Malbec",
+          "description": "Vino tinto Malbec",
+          "prices": [
+            "$1200"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Viñedo San Miguel - Syrah",
+          "description": "Vino tinto Syrah",
+          "prices": [
+            "$1000"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Viñedo San Miguel - Blend",
+          "description": "Ensamble de cinco uvas: Syrah, Merlot, Cabernet Sauvignon, Cabernet Franc y Malbec",
+          "prices": [
+            "$1200"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Casa Madero - 3V",
+          "description": "Ensamble de tres uvas: Cabernet Sauvignon, Merlot y Tempranillo",
+          "prices": [
+            "$255"
+            
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Concha y Toro - Cabernet Sauvignon",
+          "description": "Vino tinto Cabernet Sauvignon",
+          "prices": [
+            "$105"
+           
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Viñedo San Miguel - Rosé",
+          "description": "Ensamble de tres uvas: Malbec, Cabernet Franc y Cabernet Sauvignon",
+          "prices": [
+            "$170"
+            
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Viñedo San Miguel - Blancs",
+          "description": "Ensamble de tres uvas: Sauvignon Blanc, Chardonnay y Semillón",
+          "prices": [
+            "$170"
+            
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Casa Madero - 2V",
+          "description": "Ensamble de dos uvas: Chardonnay y Chenin Blanc",
+          "prices": [
+            "$210"
+            
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-9",
+      "name": "CAFETERÍA",
+      "slug": "cafeteria",
+      "items": [
+        {
+          "name": "Espresso",
+          "description": "Café de especialidad Ocampo de Nayarit",
+          "prices": [
+            "$45"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Americano",
+          "description": "Café de especialidad Ocampo de Nayarit",
+          "prices": [
+            "$50"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Ice Coffee",
+          "description": "Café de especialidad Ocampo de Nayarit",
+          "prices": [
+            "$55"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Latte",
+          "description": "Café de especialidad Ocampo de Nayarit",
+          "prices": [
+            "$60"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Capuccino",
+          "description": "Café de especialidad Ocampo de Nayarit",
+          "prices": [
+            "$60"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Mocca",
+          "description": "Café de especialidad Ocampo de Nayarit",
+          "prices": [
+            "$65"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Chocolate caliente",
+          "description": "Bebida caliente de chocolate",
+          "prices": [
+            "$60"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Matcha",
+          "description": "Bebida de matcha",
+          "prices": [
+            "$65"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tabs-10",
+      "name": "DESPUÉS DE LA TABLA",
+      "slug": "despues-de-la-tabla",
+      "items": [
+        {
+          "name": "Croissant Bric&Fig",
+          "description": "Croissant de mantequilla relleno de queso brie fundido, con higos frescos y miel de abeja",
+          "prices": [
+            "$135"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Bric Snacktacular",
+          "description": "Queso Brie horneado con mermelada de frutos rojos, coronado con mezcla de nueces y zarzamora fresca, acompañado de pan artesanal (Ideal para 2 personas)",
+          "prices": [
+            "$285"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Brownic",
+          "description": "Barra de pan de chocolate horneado con nueces, acompañado de fresas",
+          "prices": [
+            "$75"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        },
+        {
+          "name": "Alfogato del Bosque",
+          "description": "Espresso infusionado con zarzamora, frambuesa y blueberrie, vertido sobre dos bolas de helado Häägen-Daz de vainilla, coronado con frutos rojos",
+          "prices": [
+            "$195"
+          ],
+          "image": {
+            "src": "/assets/images/coming_soon.jpg"
+          }
+        }
+      ]
+    }
+  ]
+}

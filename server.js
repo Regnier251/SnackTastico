@@ -22,13 +22,13 @@ app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '7d',
   etag: true,
   lastModified: true,
-  setHeaders: (res, path) => {
+  setHeaders: (res, resourcePath) => {
     // Cache-Control específico según tipo de archivo
-    if (path.endsWith('.css') || path.endsWith('.js')) {
+    if (resourcePath.endsWith('.css') || resourcePath.endsWith('.js')) {
       res.setHeader('Cache-Control', 'public, max-age=604800'); // 1 semana
-    } else if (path.endsWith('.webp') || path.endsWith('.jpg') || path.endsWith('.png')) {
+    } else if (resourcePath.endsWith('.webp') || resourcePath.endsWith('.jpg') || resourcePath.endsWith('.png')) {
       res.setHeader('Cache-Control', 'public, max-age=2592000'); // 30 días
-    } else if (path.endsWith('.woff2') || path.endsWith('.woff')) {
+    } else if (resourcePath.endsWith('.woff2') || resourcePath.endsWith('.woff')) {
       res.setHeader('Cache-Control', 'public, max-age=31536000'); // 1 año
     }
     
@@ -39,6 +39,9 @@ app.use(express.static(path.join(__dirname, 'public'), {
     res.setHeader('Vary', 'Accept-Encoding');
   }
 }));
+
+// Servir archivos de datos
+app.use('/data', express.static(path.join(__dirname, 'data')));
 
 // Configuración de Twilio
 const client = twilio(
@@ -87,7 +90,6 @@ app.use(helmet({
     }
   }
 }));
-
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
