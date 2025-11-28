@@ -1632,11 +1632,12 @@ iframe {
         box-shadow:0 4px 12px rgba(138, 43, 226, 0.1);
         padding-right:0 !important
     }
+    /* altura del menu */
     #carta .tabs-content img {
         float:none;
         width:100%;
         max-width:100%;
-        height:180px;
+        height:190px;;
         margin-right:0;
         object-fit:cover
     }
@@ -1661,7 +1662,8 @@ iframe {
         padding:12px 15px;
         background-color:#f9f6ff;
         border-top:1px dashed var(--primary-color);
-        text-align:right
+        text-align:right;
+        margin-top: 10%;
     }
     #carta .tabs-content .price h6 {
         position:static;
