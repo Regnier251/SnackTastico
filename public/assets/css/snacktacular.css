@@ -292,14 +292,15 @@ article,aside,footer,header,hgroup,nav,section {
 body,html {
     font-family:'Poppins', sans-serif;
     font-weight:500;
-    background-color:var(--surface-color);
+    background-color:var(--base-color);
     font-size:16px;
     -ms-text-size-adjust:100%;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     width:100%;
     max-width:100%;
-    overflow-x:hidden
+    overflow-x:hidden;
+    background:var(--surface-color);
 }
 a {
     text-decoration:none !important
@@ -325,11 +326,6 @@ p {
     font-size:15px;
     line-height:30px;
     color:var(--text-color)
-}
-body,html {
-    background:var(--surface-color);
-    background-color:var(--base-color);
-    font-family:'Poppins', sans-serif
 }
 ::selection {
     background:var(--primary-color);
