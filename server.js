@@ -17,28 +17,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Configuración avanzada de caché y optimización para archivos estáticos
-app.use(express.static(path.join(__dirname, 'public'), {
-  maxAge: '7d',
-  etag: true,
-  lastModified: true,
-  setHeaders: (res, resourcePath) => {
-    // Cache-Control específico según tipo de archivo
-    if (resourcePath.endsWith('.css') || resourcePath.endsWith('.js')) {
-      res.setHeader('Cache-Control', 'public, max-age=604800'); // 1 semana
-    } else if (resourcePath.endsWith('.webp') || resourcePath.endsWith('.jpg') || resourcePath.endsWith('.png')) {
-      res.setHeader('Cache-Control', 'public, max-age=2592000'); // 30 días
-    } else if (resourcePath.endsWith('.woff2') || resourcePath.endsWith('.woff')) {
-      res.setHeader('Cache-Control', 'public, max-age=31536000'); // 1 año
-    }
-    
-    // Habilitar CORS para recursos estáticos
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    
-    // Optimización de compresión
-    res.setHeader('Vary', 'Accept-Encoding');
-  }
-}));
+// Servir archivos estáticos DESPUÉS de configurar EJS
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Servir archivos de datos
 app.use('/data', express.static(path.join(__dirname, 'data')));
@@ -50,20 +30,19 @@ const client = twilio(
 );
 
 const apiLimiter = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000, // 24 horas
-  max: 20, // Permite más peticiones
+  windowMs: 24 * 60 * 60 * 1000,
+  max: 20,
   message: 'Has excedido el límite de peticiones',
   standardHeaders: true,
   legacyHeaders: false,
   keyGenerator: (req) => {
-    // Manejo correcto para IPv4/IPv6 y proxies
     const forwarded = req.headers['x-forwarded-for'];
     const ip = forwarded ? forwarded.split(',')[0] : req.socket.remoteAddress;
-    return ip.replace(/:\d+$/, ''); // Elimina puerto si existe
+    return ip.replace(/:\d+$/, '');
   }
 });
 
-// Middlewares y antes de las rutas
+// Middlewares de seguridad
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
@@ -73,7 +52,8 @@ app.use(helmet({
         "https://code.jquery.com",
         "https://cdn.jsdelivr.net",
         "https://cdnjs.cloudflare.com",
-        "https://unpkg.com"
+        "https://unpkg.com",
+        "'unsafe-inline'"
       ],
       scriptSrcElem: [
         "'self'",
@@ -92,7 +72,13 @@ app.use(helmet({
 }));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  const cargarSnow = esFechaEspecial();
+  console.log(`Cargando página. Snow activo: ${cargarSnow}`);
+  
+  res.render('index', { 
+    cargarSnow: cargarSnow,
+    fechaActual: new Date().toISOString()
+  });
 });
 
 app.post('/enviar-whatsapp', apiLimiter, async (req, res) => {
@@ -137,8 +123,8 @@ app.use((req, res) => {
   res.status(404).send('Página no encontrada');
 });
 
-// Iniciar servidor
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

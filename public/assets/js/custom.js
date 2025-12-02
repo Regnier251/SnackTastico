@@ -145,7 +145,7 @@
     });
   }
 
-  // Page loading animation with performance optimizations
+  // Page loading animation
   function hidePreloader() {
     var preloader = document.getElementById('preloader');
     if (!preloader) return;
