@@ -36,24 +36,10 @@
     });
   });
 
-  // Modern Slider
-  $(".Modern-Slider").slick({
-    autoplay: true,
-    autoplaySpeed: 10000,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    pauseOnHover: false,
-    dots: true,
-    pauseOnDotsHover: true,
-    cssEase: 'linear',
-	fade:true,
-    draggable: false,
-    prevArrow: '<button class="PrevArrow" aria-label="Banner anterior"></button>',
-    nextArrow: '<button class="NextArrow" aria-label="Banner siguiente"></button>', 
-  });
+  // Modern Slider (HERO)
+  $(".Modern-Slider").slick();
 
-  // Menu items carousel
+  // Muestrario items carousel
   const $menuCarousel = $('.owl-menu-item');
   const MENU_AUTOPLAY_DELAY = 5000;
   let menuAutoplayTimer = null;
@@ -220,6 +206,8 @@
     'tabs-5': '/assets/images/menu/submenu/tab-icon-05.webp',
     'tabs-6': '/assets/images/menu/submenu/tab-icon-06.webp',
     'tabs-7': '/assets/images/menu/submenu/tab-icon-07.webp',
+    'tabs-8': '/assets/images/menu/submenu/tab-icon-08.webp',
+    'tabs-9': '/assets/images/menu/submenu/tab-icon-09.webp',
     'tabs-10': '/assets/images/menu/submenu/tab-icon-10.webp'
   };
   const DEFAULT_TAB_ICON = MENU_TAB_ICONS['tabs-1'];

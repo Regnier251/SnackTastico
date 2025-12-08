@@ -46,7 +46,7 @@
                     <img src="assets/images/components/snacktacular-logo.webp" alt="SnackTastico" class="logo-img">
                 </a>
                 
-                <!-- Botón hamburguesa para móvil -->
+                <!-- Botón hamburguesa -->
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" 
                         data-bs-target="#navbarNav" aria-controls="navbarNav" 
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -133,10 +133,23 @@
                                     </picture>
                                 </div>
                             </div>
+                            <!-- Item -->
+                            <div class="item">
+                                <div class="img-fill">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="/assets/images/about/slide-04.webp">
+                                        <source media="(min-width: 768px)" srcset="/assets/images/about/slide-04.webp?w=1024">
+                                        <img src="/assets/images/about/slide-04.webp?w=640"
+                                             alt="Slide 4"
+                                             loading="lazy"
+                                             width="1920"
+                                             height="1080">
+                                    </picture>
+                                </div>
+                            </div>
                             </div>
                              <div class="left-content">
                                 <div class="inner-content">
-
                                 </div>
                             </div>
                         </div>
@@ -340,43 +353,67 @@
                     <div class="owl-menu-item owl-carousel">
                         <div class="item">
                             <div class='card card1'>
+                                <div class="card-thumb">
+                                    <img src="/assets/images/menu/bagettes&ciabatta/baguette-burrata-serrano.webp" alt="Burrata Serrana">
+                                </div>
                                 <div class='info'>
-                                    <p class='description'>Burrata fresca, jamón serrano, arúgula, reducción de balsámico y tomates cherry confitados sobre pan de masa madre.</p>
+                                    <h3 class="card-title">Baguette Burrata Serrana</h3>
+                                    <p class='description'>Jamón serrano, arúgula, reducción de balsámico y tomates cherry confitados sobre pan de masa madre.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='card card2'>
+                                <div class="card-thumb">
+                                    <img src="/assets/images/menu/tablitas/tablita-violeta.webp" alt="Tablita Violeta">
+                                </div>
                                 <div class='info'>
+                                    <h3 class="card-title">Tablita Violeta</h3>
                                     <p class='description'>Queso Brie, cheddar, manchego de tres leches, jamón serrano, salami, frutas, aceitunas, pan, pretzel, miel y mermelada.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='card card3'>
+                                <div class="card-thumb">
+                                    <img src="/assets/images/menu/huerto/ensalada-otoño-azul.webp" alt="Ensalada Otoño Azul">
+                                </div>
                                 <div class='info'>
-                                    <p class='description'>Jamón serrano, mezcla de lechugas, vinagreta tinta balsámica, tomates cherry, durazno, parmesano y almendras.</p>
+                                    <h3 class="card-title">Ensalada Otoño Azul</h3>
+                                    <p class='description'>Hojas de espinaca y arúgula con higos frescos de temporada, queso azul cremoso, nuez de castilla y un toque de miel</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='card card4'>
-                                    <div class='info'>
+                                <div class="card-thumb">
+                                    <img src="/assets/images/menu/tablita-reunion.webp" alt="Tablita Reunion">
+                                </div>
+                                <div class='info'>
+                                    <h3 class="card-title">Tablita Reunion</h3>
                                     <p class='description'>Cuatro quesos, tres charcutería, ocho complementos, dos conservas, pan y pretzels.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='card card5'>
-                                    <div class='info'>
-                                    <p class='description'>Pan de masa madre, aderezo de mostaza miel, queso manchego natural, jamón ahumado, mix de lechugas y tomate fresco.</p>
+                                <div class="card-thumb">
+                                    <img src="/assets/images/menu/bagettes&ciabatta/baguette-italiano.webp" alt="Baguette Italiano">
+                                </div>
+                                <div class='info'>
+                                    <h3 class="card-title">Baguette Italiano</h3>
+                                    <p class='description'>Pan de masa madre tostado, stracciatella, hojuelas de chile quebrado, salami cervalat, chorizo pamplona, corned beef y jamón ahumado casero</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='card card6'>
+                                <div class="card-thumb">
+                                    <img src="/assets/images/muestrario/vinos-mostrador.webp" alt="Vinos Mostrador">
+                                </div>
                                 <div class='info'>
-                                    <p class='description'>Vinos variados, opciones desde tintos y blancos hasta bebidas dulces y refrescantes.</p>
+                                    <h3 class="card-title">Opciones de Vinos</h3>
+                                    <p class='description'>Variedadde vinos desde tintos y blancos</p>
                                 </div>
                             </div>
                         </div>
@@ -397,6 +434,7 @@
                         </div>
                     </div>
                 </div>
+                 <!-- Especialidad 1 -->
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="season-item" data-aos="flip-right">
@@ -420,6 +458,7 @@
                             </div>
                         </div>
                     </div>
+                     <!-- Especialidad 2 -->
                     <div class="col-lg-4">
                         <div class="season-item" data-aos="flip-left">
                             <div class="card-inner">
@@ -429,35 +468,36 @@
                                         <img src="/assets/images/especialidades-temporada/especialidad-02.webp" alt="season #2">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Tablita invidual</h4>
-                                        <span>Tu propia tabla con lo más te guste</span>
+                                        <h4>Tablita halloween</h4>
+                                        <span>Ideal para disfrutar durante una velada terroríficamente deliciosa.</span>
                                     </div>
                                 </div>
                                 <div class="card-back">
                                     <div class="back-content">
-                                        <h4>Tablita individual</h4>
-                                        <p>Personaliza tu propia tabla con tus ingredientes favoritos. Una experiencia única a tu medida.</p>
+                                        <h4>Tablita halloween</h4>
+                                        <p>Combinacón de sabores intensos y colores otoñales para celebrar la noche más encantada del año. <br/> Todo decorada con pequeños detalles espeluznantemente divertidos  que le dan ese ambiente festivo y misterioso.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Especialidad 3 -->
                     <div class="col-lg-4">
                         <div class="season-item" data-aos="flip-right">
                             <div class="card-inner">
                                 <div class="card-front">
                                     <div class="thumb">
                                         <div class="overlay"></div>
-                                        <img src="/assets/images/especialidades-temporada/especialidad-03.webp" alt="season #3">
+                                        <img src="/assets/images/coming_soon.webp" alt="season #3">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Tablillas</h4>
-                                        <span>Reuniones</span>
+                                        <h4>Tablita Navideña</h4>
+                                        <span>Especial para una explendida festividad</span>
                                     </div>
                                 </div>
                                 <div class="card-back">
                                     <div class="back-content">
-                                        <h4>Tablillas</h4>
+                                        <h4>Tablita</h4>
                                         <p>Perfectas para reuniones y celebraciones. Una variedad de sabores para compartir con amigos y familia.</p>
                                     </div>
                                 </div>
@@ -622,7 +662,8 @@
                         <div>
                             <h4>Horario de atención</h4>
                             <p>
-                                <strong>Lun-Dom:</strong> 10AM - 10PM<br>
+                                <strong>Lun-Vie:</strong> 12:30 - 22:00hrs.<br>
+                                <strong>Sáb-Dom:</strong> 14:00 - 22:00hrs.<br>
                             </p>
                         </div>
                     </div>

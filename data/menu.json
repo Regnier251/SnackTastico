@@ -12,7 +12,7 @@
             "$275"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/antipasto/tabla-bocaditos-antipasto.webp"
           }
         },
         {
@@ -22,7 +22,7 @@
             "$235"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/antipasto/tabla-bocaditos-mixtos.webp"
           }
         },
         {
@@ -32,7 +32,7 @@
             "$585"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/antipasto/tabla-jamon-serrano.webp"
           }
         },
         {
@@ -42,7 +42,7 @@
             "$385"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/antipasto/sushi-italiano.webp"
           }
         }
       ]
@@ -59,7 +59,7 @@
             "$135"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -69,7 +69,7 @@
             "$255"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/huerto/ensalada-dulce&curado.webp"
           }
         },
         {
@@ -79,7 +79,7 @@
             "$185"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/huerto/ensalada-otoño-azul.webp"
           }
         }
       ]
@@ -96,7 +96,7 @@
             "$539"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/crostinis/tabla-crostinis.webp"
           }
         }
       ]
@@ -113,7 +113,7 @@
             "$169"
           ],
           "image": {
-            "src": "/assets/images/menu/baguette-caprese.webp"
+            "src": "/assets/images/menu/bagettes&ciabatta/baguette-caprese.webp"
           }
         },
         {
@@ -123,7 +123,7 @@
             "$269"
           ],
           "image": {
-            "src": "/assets/images/menu/baguette-burratas-serrana.webp"
+            "src": "/assets/images/menu/bagettes&ciabatta/baguette-burratas-serrana.webp"
           }
         },
         {
@@ -133,7 +133,7 @@
             "$229"
           ],
           "image": {
-            "src": "/assets/images/menu/baguette-italiano.webp"
+            "src": "/assets/images/menu/bagettes&ciabatta/baguette-italiano.webp"
           }
         },
         {
@@ -143,7 +143,7 @@
             "$139"
           ],
           "image": {
-            "src": "/assets/images/menu/ciabatta-manchega-ahumada.webp"
+            "src": "/assets/images/menu/bagettes&ciabatta/ciabatta-manchega-ahumada.webp"
           }
         }
       ]
@@ -160,7 +160,14 @@
             "$355"
           ],
           "image": {
-            "src": "/assets/images/menu/tablita-violeta.webp"
+            "src": "/assets/images/menu/tablitas/tablita-violeta.webp"
+          }
+        },
+        {
+          "name": "Tablita Custom",
+          "description": "Tabla especial de la casa que incluye queso Brie cremoso, cheddar suave, manchego tres leches, jamón serrano, uvas rojas, ate de membrillo, higo fresco* y miel. Este conjunto ofrece el equilibrio ideal entre dulzura, suavidad y carácter. *Solo por temporada (Para 2 a 3 personas. Ideal con vino tinto joven)",
+          "image": {
+            "src": "/assets/images/menu/tablitas/tablita-creada.webp"
           }
         }
       ]
@@ -177,7 +184,7 @@
             "$650"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/gourmet/tablita-para-dos.webp"
           }
         },
         {
@@ -187,7 +194,7 @@
             "$980"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -197,7 +204,7 @@
             "$1350"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/gourmet/tablita-para-celebrar&compartir.webp"
           }
         },
         {
@@ -207,7 +214,7 @@
             "$2350"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/tablita-reunion.webp"
           }
         }
       ]
@@ -225,7 +232,7 @@
             
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/coctelerias&bebidas/sangria-tinto-verano.webp"
           }
         },
         {
@@ -235,7 +242,7 @@
             "$50"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -245,7 +252,7 @@
             "$50"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -255,7 +262,7 @@
             "$50"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/coctelerias&bebidas/spritz-italiana.webp"
           }
         },
         {
@@ -265,7 +272,7 @@
             "$35"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -275,7 +282,7 @@
             "$35"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/bebidas/limonada.webp"
           }
         },
         {
@@ -285,7 +292,7 @@
             "$35"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -295,7 +302,7 @@
             "$35"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         }
       ]
@@ -306,53 +313,53 @@
       "slug": "vinos",
       "items": [
         {
-          "name": "Viñedo San Miguel - Latiendo",
+          "name": "Latiendo",
           "description": "Ensamble de tres uvas: Malbec, Syrah y Merlot",
           "prices": [
             "$160"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/vinos/latiendo-vino.webp"
           }
         },
         {
-          "name": "Viñedo San Miguel - Merlot",
+          "name": "Merlot",
           "description": "Vino tinto Merlot",
           "prices": [
             "$1000"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
-          "name": "Viñedo San Miguel - Malbec",
+          "name": "Malbec",
           "description": "Vino tinto Malbec",
           "prices": [
             "$1200"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
-          "name": "Viñedo San Miguel - Syrah",
+          "name": "Syrah",
           "description": "Vino tinto Syrah",
           "prices": [
             "$1000"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
-          "name": "Viñedo San Miguel - Blend",
+          "name": "Blend",
           "description": "Ensamble de cinco uvas: Syrah, Merlot, Cabernet Sauvignon, Cabernet Franc y Malbec",
           "prices": [
             "$1200"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -363,7 +370,7 @@
             
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -374,29 +381,29 @@
            
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
-          "name": "Viñedo San Miguel - Rosé",
+          "name": "Rosé",
           "description": "Ensamble de tres uvas: Malbec, Cabernet Franc y Cabernet Sauvignon",
           "prices": [
             "$170"
             
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
-          "name": "Viñedo San Miguel - Blancs",
+          "name": "Blancs",
           "description": "Ensamble de tres uvas: Sauvignon Blanc, Chardonnay y Semillón",
           "prices": [
             "$170"
             
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -407,7 +414,7 @@
             
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         }
       ]
@@ -424,7 +431,7 @@
             "$45"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -434,7 +441,7 @@
             "$50"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -444,7 +451,7 @@
             "$55"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -454,7 +461,7 @@
             "$60"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -464,7 +471,7 @@
             "$60"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -474,7 +481,7 @@
             "$65"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -484,7 +491,7 @@
             "$60"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
@@ -494,7 +501,7 @@
             "$65"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         }
       ]
@@ -505,43 +512,43 @@
       "slug": "despues-de-la-tabla",
       "items": [
         {
-          "name": "Croissant Bric&Fig",
+          "name": "Croissant Brie&Fig",
           "description": "Croissant de mantequilla relleno de queso brie fundido, con higos frescos y miel de abeja",
           "prices": [
             "$135"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/cafeteria/croissant-Brie&fi.webp"
           }
         },
         {
-          "name": "Bric Snacktacular",
+          "name": "Brie Snacktacular",
           "description": "Queso Brie horneado con mermelada de frutos rojos, coronado con mezcla de nueces y zarzamora fresca, acompañado de pan artesanal (Ideal para 2 personas)",
           "prices": [
             "$285"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/coming_soon.webp"
           }
         },
         {
-          "name": "Brownic",
+          "name": "Brownie",
           "description": "Barra de pan de chocolate horneado con nueces, acompañado de fresas",
           "prices": [
             "$75"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/cafeteria/brownie.webp"
           }
         },
         {
-          "name": "Alfogato del Bosque",
+          "name": "Affogato del Bosque",
           "description": "Espresso infusionado con zarzamora, frambuesa y blueberrie, vertido sobre dos bolas de helado Häägen-Daz de vainilla, coronado con frutos rojos",
           "prices": [
             "$195"
           ],
           "image": {
-            "src": "/assets/images/coming_soon.jpg"
+            "src": "/assets/images/menu/cafeteria/affogato-bosque.webp"
           }
         }
       ]

@@ -767,14 +767,22 @@ ul.slick-dots {
     aspect-ratio:3 / 4;
     min-height:320px;
     overflow:hidden;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
     position:relative;
     cursor:pointer;
     border-radius:15px;
     box-shadow:0 8px 25px rgba(0, 0, 0, 0.1);
     transition:transform 0.3s ease, box-shadow 0.3s ease
+}
+.card-thumb {
+    position:absolute;
+    inset:0;
+    z-index:0;
+}
+.card-thumb img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block
 }
 .card:hover {
     transform:translateY(-5px);
@@ -804,29 +812,12 @@ ul.slick-dots {
     }
 }
 
-.card1 {
-    background-image:url("../images/muestrario/burrata.webp")
-}
-.card2 {
-    background-image:url("../images/muestrario/tablita-violeta.webp")
-}
-.card3 {
-    background-image:url("../images/muestrario/ensalada-dulce_curado.webp")
-}
-.card4 {
-    background-image:url("../images/muestrario/tablilla-reunion.webp")
-}
-.card5 {
-    background-image:url("../images/muestrario/ciabatta-manchega.webp")
-}
-.card6 {
-    background-image:url("../images/muestrario/vinos-mostrador.webp")
-}
 .info {
     position:absolute;
     inset:0;
     background-color:var(--accent-color);
     transform:translateY(100%) translateZ(0);
+    z-index:1;
     transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display:flex;
     flex-direction:column;
@@ -839,6 +830,13 @@ ul.slick-dots {
     -webkit-backdrop-filter: blur(8px);
     border-radius:10px;
     overflow:hidden
+}
+.card-title {
+    font-size:clamp(1.2rem, 2vw, 1.5rem);
+    font-weight:700;
+    color:var(--contrast-color);
+    text-transform:none;
+    margin:0
 }
 .card.active .info,.card:hover .info {
     background-color:rgba(113, 137, 106, 0.95);
@@ -1487,8 +1485,8 @@ iframe {
 }
 #carta .tabs-content img {
     float:left;
-    width:100px;
-    max-width:100px;
+    width:130px;
+    max-width:130px;
     margin-right:20px;
     border-radius:5px
 }
@@ -1515,10 +1513,7 @@ iframe {
     overflow-x:auto;
     white-space:nowrap
 }
-#carta .tabs-content img {
-    max-width:100px;
-    height:auto
-}
+
 @media (min-width: 769px) {
     #carta .tabs-content .tab-item {
         align-items:flex-start;
@@ -1602,7 +1597,7 @@ iframe {
 @media (min-width: 1200px) {
     #carta .tabs-content img {
         width:160px;
-        height:160px
+        height:230px;
     }
     #carta .tabs-content .content-container {
         min-height:160px;
@@ -1631,9 +1626,9 @@ iframe {
     #carta .tabs-content .tab-item {
         padding-right:70px
     }
-    #carta .tabs-content img {
+    /* #carta .tabs-content img {
         max-width:80px
-    }
+    } */
 }
 @media (max-width: 1199px) {
     #carta {
@@ -1655,7 +1650,7 @@ iframe {
         float:none;
         width:100%;
         max-width:100%;
-        height:190px;;
+        height: 350px;
         margin-right:0;
         object-fit:cover
     }
@@ -1701,7 +1696,7 @@ iframe {
 }
 @media (max-width: 480px) {
     #carta .tabs-content img {
-        height:160px
+        height:300px;
     }
     #carta .tabs-content h4 {
         font-size:1.15rem
