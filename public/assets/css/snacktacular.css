@@ -1495,8 +1495,7 @@ iframe {
     font-size:20px;
     font-weight:700;
     color:var(--accent-color);
-    margin-bottom:10px;
-    margin-right:100px
+    margin: 10px 100px 10px 0;
 }
 #carta .tabs-content p {
     margin-right:100px;
@@ -1548,7 +1547,6 @@ iframe {
     }
     #carta .tabs-content h4 {
         font-size:1.4rem;
-        margin-bottom:10px;
         font-weight:600;
         padding-top:0
     }
