@@ -16,14 +16,29 @@
         <link rel="preload" as="style" href="/assets/css/navbar.css">
 
         <!-- CSS Files -->
-        <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
         <link rel="icon" type="image" href="assets/images/components/icon-snacktacular.webp">
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+        <link rel="preload" as="style" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/assets/css/bootstrap.min.css"></noscript>
+
+        <link rel="preload" as="style" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css"></noscript>
+
         <link rel="stylesheet" href="/assets/css/snacktacular.css">
         <link rel="stylesheet" href="/assets/css/navbar.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/css/lightbox.css">
+
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'" crossorigin="anonymous">
+        <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"></noscript>
+
+        <link rel="preload" as="style" href="/assets/vendor/aos/aos.css">
+        <link rel="stylesheet" href="/assets/vendor/aos/aos.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/assets/vendor/aos/aos.css"></noscript>
+
+        <link rel="preload" as="style" href="/assets/css/lightbox.css">
+        <link rel="stylesheet" href="/assets/css/lightbox.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/assets/css/lightbox.css"></noscript>
         
     </head>
 
@@ -194,7 +209,7 @@
                     <div class="col-lg-6 col-md-6 order-lg-2 order-md-2 order-3">
                         <div class="right-content">
                             <div class="thumb video-container" data-aos="zoom-out">
-                                <video autoplay muted loop playsinline> 
+                                <video autoplay muted loop playsinline aria-hidden="true" role="presentation" aria-label="Video decorativo de fondo sin sonido">  
                                     <source src="/assets/Video/movie.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -227,7 +242,25 @@
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="mb-5">
-                    <iframe title="Mapa de ubicación de nuestra tienda en Guanajuato" style="width: 100%" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Calle%20de%20Alonso%2020,%20Zona%20Centro,%2036000%20Guanajuato,%20Gto.+(Snacktacular)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <div class="map-frame-wrapper">
+                        <iframe 
+                            class="map-frame js-lazy-map"
+                            title="Mapa de ubicación de nuestra tienda en Guanajuato"
+                            style="width: 100%"
+                            width="100%"
+                            height="400"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            data-src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Calle%20de%20Alonso%2020,%20Zona%20Centro,%2036000%20Guanajuato,%20Gto.+(Snacktacular)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        </iframe>
+                        <noscript>
+                            <iframe title="Mapa de ubicación en Guanajuato" style="width: 100%" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=Calle%20de%20Alonso%2020,%20Zona%20Centro,%2036000%20Guanajuato,%20Gto.+(Snacktacular)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        </noscript>
+                    </div>
                 </div>
                 <!-- End Google Maps -->
 
@@ -587,9 +620,6 @@
                                     <div>    
                                     <div class="input-group date" data-date-format="dd/mm/yyyy">
                                         <input name="date" id="date" type="date" class="form-control" placeholder="dd/mm/aaaa" required>
-                                        <div class="input-group-addon" >
-                                        <span class="glyphicon glyphicon-th"></span>
-                                        </div>
                                     </div>
                                     </div>   
                                 </div>
@@ -696,6 +726,35 @@
         <!-- ***** Footer End ***** -->
 
         <script src="/assets/js/snow.js"></script>
+
+        <script>
+            (function() {
+                const mapFrame = document.querySelector('.js-lazy-map');
+                if (!mapFrame) return;
+
+                const activateMap = () => {
+                    const src = mapFrame.getAttribute('data-src');
+                    if (!src) return;
+                    mapFrame.setAttribute('src', src);
+                    mapFrame.removeAttribute('data-src');
+                };
+
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries, obs) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                activateMap();
+                                obs.disconnect();
+                            }
+                        });
+                    }, { rootMargin: '200px' });
+                    observer.observe(mapFrame);
+                } else {
+                    window.addEventListener('load', activateMap, { once: true });
+                    window.addEventListener('scroll', activateMap, { once: true });
+                }
+            })();
+        </script>
 
         <script>
             document.getElementById("table").addEventListener("submit", async (e) => {

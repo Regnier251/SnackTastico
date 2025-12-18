@@ -1059,8 +1059,16 @@ ul.slick-dots {
     display:flex;
     justify-content:center
 }
-iframe {
-    border-radius:15px
+.map-frame-wrapper {
+    position:relative;
+    border-radius:15px;
+    overflow:hidden;
+}
+.map-frame {
+    display:block;
+    border:0;
+    border-radius:0;
+    min-height:400px;
 }
 .container .section-title span .description-title {
     padding-top:50px
