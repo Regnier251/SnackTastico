@@ -1,0 +1,30 @@
+/* CSS crítico para el renderizado inicial */
+:root {
+  --primary-color: #d2c0df;
+  --accent-color: #71896A;
+  --base-color: #EDE8D8;
+  --text-color: #000000;
+  --surface-color: #fff;
+  --contrast-color: #1d3218;
+  --contrast-primary-color: #72627e;
+  --navbar-height: 80px;
+}
+
+
+.navbar {
+  background-color: var(--surface-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-scrolled {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--primary-color);
+  z-index: 99999;
+  transition: opacity 0.3s ease-out;
+}
