@@ -1289,5 +1289,13 @@
                 });
             });
         </script>
+        <script>
+            window.addEventListener('load', () => {
+                const preloader = document.getElementById('preloader');
+                if (preloader) {
+                preloader.classList.add('loaded');
+                }
+            });
+        </script>
     </body>
 </html>
